@@ -5,10 +5,10 @@ Status: **DRAFT ONLY — not posted yet**.
 
 ---
 
-## Issue #20891 ✅ POSTED
+## Issue #20891 ⚠️ POSTED THEN REMOVED
 https://github.com/openclaw/openclaw/issues/20891
-Posted comment: https://github.com/openclaw/openclaw/issues/20891#issuecomment-3935320312
-Follow-up reference link: https://github.com/openclaw/openclaw/issues/20891#issuecomment-3935342737
+Removed comment IDs: `3935320312`, `3935342737`
+Reason: scope mismatch with reporter’s issue details (their case appears different from our local incident).
 
 ```markdown
 We hit a very similar failure mode in a filtered network (Telegram media fetch would fail while text still worked).
