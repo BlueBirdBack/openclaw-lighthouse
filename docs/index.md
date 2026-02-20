@@ -4,7 +4,7 @@
 - _none yet_
 
 ## Solved
-- _none yet_
+- [Telegram media/files got no reply (missing proxy in channel config)](./fixes/telegram-media-files-no-reply-missing-proxy.md)
 
 ---
 

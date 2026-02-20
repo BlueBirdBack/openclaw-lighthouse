@@ -22,5 +22,5 @@ Each note should include:
 
 ## Credits
 - **B3** ([@BlueBirdBack](https://github.com/BlueBirdBack)) — maintainer
-- **Rac** — OpenClaw debugging companion
+- **Rac** 🦝 — OpenClaw debugging companion, Lighthouse contributor
 - **Friend** — add GitHub handle after collaborator is confirmed
