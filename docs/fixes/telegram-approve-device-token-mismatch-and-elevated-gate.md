@@ -131,3 +131,7 @@ This command shows exactly which policy gate failed and what to change.
 ## References
 - Diagnostics: `openclaw status`, `openclaw gateway status`, `openclaw channels status --probe`
 - Session gate explain: `openclaw sandbox explain --session <session-key>`
+
+## Credits
+- **B3** — reported and confirmed the fix
+- **Rac** — write-up and documentation
