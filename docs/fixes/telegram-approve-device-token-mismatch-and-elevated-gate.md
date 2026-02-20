@@ -109,7 +109,9 @@ Use your own local CLIs to sanity-check effort modes (Codex/Claude) if required 
 - Revert broad elevated testing modes after debugging (for example `/elevated ask` or `/elevated off`).
 - Redact tokens, user IDs, and device IDs in any shared logs/docs.
 
-## Related upstream issues (closed)
+## Related Issues
+
+### Closed
 - [#1488](https://github.com/openclaw/openclaw/issues/1488) — `tools.elevated` behavior mismatch with approval settings
 - [#531](https://github.com/openclaw/openclaw/issues/531) — per-agent elevated config scope handling
 - [#2705](https://github.com/openclaw/openclaw/issues/2705) — approval resolve path (`unknown approval id`)

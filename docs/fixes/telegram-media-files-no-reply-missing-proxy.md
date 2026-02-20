@@ -84,7 +84,9 @@ openclaw gateway restart
 ## Security note
 If bot token appears in pasted commands/logs, rotate it in BotFather, update `channels.telegram.botToken`, and restart gateway.
 
-## Related upstream issues (closed)
+## Related Issues
+
+### Closed
 - [#16136](https://github.com/openclaw/openclaw/issues/16136) — Telegram voice/media dropped when `getFile` failed (no retry)
 - [#11471](https://github.com/openclaw/openclaw/issues/11471) — media fetch transient failure handling
 - [#6849](https://github.com/openclaw/openclaw/issues/6849) — Telegram file download timeout gap
