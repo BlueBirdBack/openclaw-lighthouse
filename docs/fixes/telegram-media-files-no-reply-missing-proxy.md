@@ -36,10 +36,12 @@ After:
     "groups": { "*": { "requireMention": true } },
     "groupPolicy": "open",
     "streamMode": "partial",
-    "proxy": "http://localhost:26213"
+    "proxy": "http://<proxy-host>:<proxy-port>"
   }
 }
 ```
+
+Use the proxy endpoint that matches your environment.
 
 ## Validation
 - [x] reproduced before fix
