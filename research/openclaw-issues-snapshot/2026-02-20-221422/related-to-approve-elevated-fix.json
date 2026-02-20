@@ -1,0 +1,1960 @@
+[
+  {
+    "number": 11022,
+    "state": "open",
+    "title": "[Bug]: /elevated allowlist can be bypassed by matching recipient (ctx.To) instead of sender",
+    "html_url": "https://github.com/openclaw/openclaw/issues/11022",
+    "score": 4,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-20T04:08:43Z"
+  },
+  {
+    "number": 21146,
+    "state": "open",
+    "title": "Gateway pairing-required loops need requestId-aware recovery hints",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21146",
+    "score": 4,
+    "hits": [
+      "device token mismatch",
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-19T18:23:04Z"
+  },
+  {
+    "number": 19352,
+    "state": "open",
+    "title": "[Bug]: Device pairing bootstrap impossible - chicken-and-egg problem when CLI also requires pairing",
+    "html_url": "https://github.com/openclaw/openclaw/issues/19352",
+    "score": 4,
+    "hits": [
+      "device token mismatch",
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-17T19:21:57Z"
+  },
+  {
+    "number": 16184,
+    "state": "open",
+    "title": "[Bug]: xec approval messages not being forwarded to Telegram despite correct configuration",
+    "html_url": "https://github.com/openclaw/openclaw/issues/16184",
+    "score": 4,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-14T12:31:34Z"
+  },
+  {
+    "number": 2040,
+    "state": "closed",
+    "title": "Approval messages not being sent to Telegram despite correct configuration",
+    "html_url": "https://github.com/openclaw/openclaw/issues/2040",
+    "score": 4,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-01-29T13:16:06Z"
+  },
+  {
+    "number": 1488,
+    "state": "closed",
+    "title": "Bug: tools.elevated ignores tools.exec.ask setting, forcing approval prompts",
+    "html_url": "https://github.com/openclaw/openclaw/issues/1488",
+    "score": 4,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-01-24T04:54:13Z"
+  },
+  {
+    "number": 21812,
+    "state": "open",
+    "title": "Sub-agent spawning fails with 'pairing required' after config change + gateway restart",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21812",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-20T12:18:15Z"
+  },
+  {
+    "number": 21688,
+    "state": "open",
+    "title": "Pairing scope-upgrade loop: repeated 'pairing required' reconnects for same device",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21688",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-20T10:04:02Z"
+  },
+  {
+    "number": 21655,
+    "state": "open",
+    "title": "[Bug]: Internal gateway operations (cron, announce, sessions_spawn) fail with \"pairing required\" due to device scope enforcement on self-calls",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21655",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-20T09:59:07Z"
+  },
+  {
+    "number": 21647,
+    "state": "open",
+    "title": "Loopback connections require device pairing on every gateway restart (2026.2.19)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21647",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-20T08:11:55Z"
+  },
+  {
+    "number": 21593,
+    "state": "open",
+    "title": "Bug: CLI_DEFAULT_OPERATOR_SCOPES missing read/write causes \"pairing required\" failures on localhost",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21593",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-20T07:01:29Z"
+  },
+  {
+    "number": 21470,
+    "state": "open",
+    "title": "CLI device paired with operator.read scope only — cron list, gateway status fail with 'pairing required'",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21470",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-20T02:59:42Z"
+  },
+  {
+    "number": 20707,
+    "state": "open",
+    "title": "[Bug]: Internal cron/tools 'gateway-client' Docker pairing is undocumented, fails by default",
+    "html_url": "https://github.com/openclaw/openclaw/issues/20707",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-20T02:24:37Z"
+  },
+  {
+    "number": 21267,
+    "state": "open",
+    "title": "[Bug]: Device token mismatch after npm update causes persistent \"pairing required\" error",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21267",
+    "score": 3,
+    "hits": [
+      "device token mismatch",
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-19T23:44:20Z"
+  },
+  {
+    "number": 20447,
+    "state": "open",
+    "title": "Control UI does not receive device.pair.requested broadcast (pairing approval UI broken)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/20447",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-19T08:30:25Z"
+  },
+  {
+    "number": 9591,
+    "state": "open",
+    "title": "/approve command fails with short approval ID (slug) - unknown approval id",
+    "html_url": "https://github.com/openclaw/openclaw/issues/9591",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-02-18T04:19:19Z"
+  },
+  {
+    "number": 2402,
+    "state": "closed",
+    "title": "[Bug]: Exec approval flow is fire-and-forget - tool returns immediately without waiting for user approval",
+    "html_url": "https://github.com/openclaw/openclaw/issues/2402",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-02-17T09:53:02Z"
+  },
+  {
+    "number": 6836,
+    "state": "closed",
+    "title": "Node pairing: device-pairing and node-pairing stores are disconnected — nodes pending/approve tools don't work",
+    "html_url": "https://github.com/openclaw/openclaw/issues/6836",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-17T00:20:07Z"
+  },
+  {
+    "number": 18177,
+    "state": "open",
+    "title": "elevatedDefault defaults to 'on' when tools.elevated.enabled is true (v2026.2.15)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/18177",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-02-16T15:36:28Z"
+  },
+  {
+    "number": 17443,
+    "state": "open",
+    "title": "[Bug]: Node pairing request invisible to gateway — `nodes pending` always empty after successful onboard",
+    "html_url": "https://github.com/openclaw/openclaw/issues/17443",
+    "score": 3,
+    "hits": [
+      "device token mismatch",
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-15T19:22:14Z"
+  },
+  {
+    "number": 16674,
+    "state": "open",
+    "title": "macOS remote onboarding (Win+WSL): token/pairing/SSH path flow is too fragile",
+    "html_url": "https://github.com/openclaw/openclaw/issues/16674",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-15T02:20:36Z"
+  },
+  {
+    "number": 8830,
+    "state": "closed",
+    "title": "Recommendation Security Upgrade stepUpAuth via cryptographic Passkey",
+    "html_url": "https://github.com/openclaw/openclaw/issues/8830",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-02-14T02:01:52Z"
+  },
+  {
+    "number": 7715,
+    "state": "closed",
+    "title": "Feature: hot-reload device pairing approvals without gateway restart",
+    "html_url": "https://github.com/openclaw/openclaw/issues/7715",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-14T01:42:29Z"
+  },
+  {
+    "number": 7012,
+    "state": "closed",
+    "title": "Feature: Auto-approve Control UI devices when valid gateway token is presented",
+    "html_url": "https://github.com/openclaw/openclaw/issues/7012",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-14T01:42:00Z"
+  },
+  {
+    "number": 15544,
+    "state": "open",
+    "title": "[Bug]:",
+    "html_url": "https://github.com/openclaw/openclaw/issues/15544",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-13T15:49:17Z"
+  },
+  {
+    "number": 11489,
+    "state": "open",
+    "title": "[Feature Request] Group pairing flow: notify owner + read-only mode for unconfigured groups",
+    "html_url": "https://github.com/openclaw/openclaw/issues/11489",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-10T07:12:28Z"
+  },
+  {
+    "number": 5026,
+    "state": "closed",
+    "title": "[Bug]: Gateway service install failed: schtasks create failed: ERROR: The stub received bad",
+    "html_url": "https://github.com/openclaw/openclaw/issues/5026",
+    "score": 3,
+    "hits": [
+      "approve",
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-07T13:30:28Z"
+  },
+  {
+    "number": 8394,
+    "state": "closed",
+    "title": "Security Audit: 29 Critical/High Vulnerabilities Identified",
+    "html_url": "https://github.com/openclaw/openclaw/issues/8394",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-02-04T01:12:39Z"
+  },
+  {
+    "number": 3257,
+    "state": "closed",
+    "title": "[Feature]: Log command details for exec approval requests",
+    "html_url": "https://github.com/openclaw/openclaw/issues/3257",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-02-01T00:29:15Z"
+  },
+  {
+    "number": 2831,
+    "state": "closed",
+    "title": "Feature Request: Per-tool approval gates (tools.ask)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/2831",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-02-01T00:28:09Z"
+  },
+  {
+    "number": 2658,
+    "state": "closed",
+    "title": "Feature: Add inline approval buttons for Telegram exec approvals",
+    "html_url": "https://github.com/openclaw/openclaw/issues/2658",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-01-27T14:41:54Z"
+  },
+  {
+    "number": 1389,
+    "state": "closed",
+    "title": "[Bug]: Exec approvals regression in v2026.1.20-2 (CLI-only mode)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/1389",
+    "score": 3,
+    "hits": [
+      "approve",
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-01-21T19:02:13Z"
+  },
+  {
+    "number": 21091,
+    "state": "closed",
+    "title": "[Bug]: Telegram inbound messages silently dropped — outbound and curl getUpdates work fine",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21091",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-20T12:37:51Z"
+  },
+  {
+    "number": 19574,
+    "state": "closed",
+    "title": "[Bug]: tools.elevated.enabled: true causes elevatedDefault to default to \"on\", silently breaking all non-PTY exec calls",
+    "html_url": "https://github.com/openclaw/openclaw/issues/19574",
+    "score": 2,
+    "hits": [
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-02-20T12:37:00Z"
+  },
+  {
+    "number": 13294,
+    "state": "closed",
+    "title": "[Bug] Slack DM pairing code sent despite dm.policy=\"open\" and allowFrom=[\"*\"]",
+    "html_url": "https://github.com/openclaw/openclaw/issues/13294",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-20T10:37:18Z"
+  },
+  {
+    "number": 21445,
+    "state": "open",
+    "title": "[Bug] Subagent spawn fails with 'pairing required' after 2.19-2 update — devices already paired",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21445",
+    "score": 2,
+    "hits": [
+      "device token mismatch",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-20T09:51:31Z"
+  },
+  {
+    "number": 21572,
+    "state": "open",
+    "title": "CLI device auth: persistent 'device token mismatch' after successful pairing (2026.2.19-2)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21572",
+    "score": 2,
+    "hits": [
+      "device token mismatch",
+      "approve"
+    ],
+    "updated_at": "2026-02-20T04:21:53Z"
+  },
+  {
+    "number": 13143,
+    "state": "closed",
+    "title": "Android Node Pairing: \"gateway error: not initialized\" - Missing node service",
+    "html_url": "https://github.com/openclaw/openclaw/issues/13143",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-20T04:06:57Z"
+  },
+  {
+    "number": 14561,
+    "state": "open",
+    "title": "Device pairing: pending requests not created for Control UI via Tailscale Serve",
+    "html_url": "https://github.com/openclaw/openclaw/issues/14561",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-20T04:03:46Z"
+  },
+  {
+    "number": 14932,
+    "state": "open",
+    "title": "[Bug]: WhatsApp pairing code sent to wrong recipient (owner instead of unauthenticated sender)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/14932",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-20T04:02:50Z"
+  },
+  {
+    "number": 21519,
+    "state": "open",
+    "title": "[Bug]:Gateway connection fails — desktop app cannot connect to local gateway",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21519",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-20T02:24:33Z"
+  },
+  {
+    "number": 21486,
+    "state": "open",
+    "title": "[Bug]: macOS app node connection fails — handshake timeout (CFNetwork never sends connect message)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21486",
+    "score": 2,
+    "hits": [
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-20T00:46:25Z"
+  },
+  {
+    "number": 14774,
+    "state": "open",
+    "title": "[Bug]: CLI operator not added to paired devices and identity authentication missing when gateway binds to LAN",
+    "html_url": "https://github.com/openclaw/openclaw/issues/14774",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-19T23:31:30Z"
+  },
+  {
+    "number": 21191,
+    "state": "open",
+    "title": "[Bug]: device-auth.json tokens never persist on macOS — CLI always gets \"device token mismatch\"",
+    "html_url": "https://github.com/openclaw/openclaw/issues/21191",
+    "score": 2,
+    "hits": [
+      "device token mismatch",
+      "approve"
+    ],
+    "updated_at": "2026-02-19T19:41:42Z"
+  },
+  {
+    "number": 8719,
+    "state": "open",
+    "title": "[Feature] OpenClaw Security Profile v1.1 (Data-centric, secure-by-default)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/8719",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-19T15:38:43Z"
+  },
+  {
+    "number": 5559,
+    "state": "open",
+    "title": "[Bug]: Docker manual setup fails - CLI cannot reach gateway due to network configuration",
+    "html_url": "https://github.com/openclaw/openclaw/issues/5559",
+    "score": 2,
+    "hits": [
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-19T12:14:47Z"
+  },
+  {
+    "number": 20702,
+    "state": "open",
+    "title": "[Bug]: Device Token Scope Escalation via Rotate Endpoint",
+    "html_url": "https://github.com/openclaw/openclaw/issues/20702",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-19T10:17:42Z"
+  },
+  {
+    "number": 20564,
+    "state": "open",
+    "title": "Feature: Instant non-AI Telegram inline-button acknowledgement + optional visible callback confirmation",
+    "html_url": "https://github.com/openclaw/openclaw/issues/20564",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-19T03:03:19Z"
+  },
+  {
+    "number": 9028,
+    "state": "closed",
+    "title": "[Bug]: Docker install/onboarding stuck: CLI can’t connect to gateway (1006/1008), token mismatch due to OPENCLAW_GATEWAY_TOKEN override + confusing pairing flow/docs",
+    "html_url": "https://github.com/openclaw/openclaw/issues/9028",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-18T21:19:32Z"
+  },
+  {
+    "number": 20321,
+    "state": "open",
+    "title": "[Feature]: Allow telegram groups by creating allowList of users",
+    "html_url": "https://github.com/openclaw/openclaw/issues/20321",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-18T19:54:12Z"
+  },
+  {
+    "number": 20282,
+    "state": "open",
+    "title": "🔇 Add silentReject option for DM allowlist policy",
+    "html_url": "https://github.com/openclaw/openclaw/issues/20282",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-18T19:06:54Z"
+  },
+  {
+    "number": 12210,
+    "state": "closed",
+    "title": "sessions_spawn fails with \"gateway closed (1008): pairing required\" for internal subagents",
+    "html_url": "https://github.com/openclaw/openclaw/issues/12210",
+    "score": 2,
+    "hits": [
+      "approval",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-18T18:27:31Z"
+  },
+  {
+    "number": 18955,
+    "state": "open",
+    "title": "[Bug]: (Discord) - Onboarding Flow - Fail To Resolve Usernames",
+    "html_url": "https://github.com/openclaw/openclaw/issues/18955",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-18T17:05:39Z"
+  },
+  {
+    "number": 20182,
+    "state": "open",
+    "title": "[Bug]: auto confirm and approvals",
+    "html_url": "https://github.com/openclaw/openclaw/issues/20182",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-18T16:26:54Z"
+  },
+  {
+    "number": 20165,
+    "state": "open",
+    "title": "Feature Request: Tool-level authorization gates for high-risk actions",
+    "html_url": "https://github.com/openclaw/openclaw/issues/20165",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-18T16:09:07Z"
+  },
+  {
+    "number": 4833,
+    "state": "open",
+    "title": "[Bug]: `openclaw node run` fails silently with \"1008: pairing required\" when connecting to a remote gateway",
+    "html_url": "https://github.com/openclaw/openclaw/issues/4833",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-18T04:24:10Z"
+  },
+  {
+    "number": 10583,
+    "state": "open",
+    "title": "execApprovals DMs sent by all Discord accounts, not just the triggering agent",
+    "html_url": "https://github.com/openclaw/openclaw/issues/10583",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-18T04:16:20Z"
+  },
+  {
+    "number": 11437,
+    "state": "open",
+    "title": "[Bug]: CWD .env can redirect OPENCLAW_CONFIG_PATH to plugins.load.paths and execute arbitrary code via jiti",
+    "html_url": "https://github.com/openclaw/openclaw/issues/11437",
+    "score": 2,
+    "hits": [
+      "approve",
+      "elevated"
+    ],
+    "updated_at": "2026-02-18T04:13:18Z"
+  },
+  {
+    "number": 19672,
+    "state": "open",
+    "title": "feat(tui): Add Plan Mode — structured planning before execution",
+    "html_url": "https://github.com/openclaw/openclaw/issues/19672",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-18T02:44:04Z"
+  },
+  {
+    "number": 19517,
+    "state": "open",
+    "title": "[Bug]: Agent-Gateway WebSocket Auth Fails After Config Change",
+    "html_url": "https://github.com/openclaw/openclaw/issues/19517",
+    "score": 2,
+    "hits": [
+      "device token mismatch",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-17T22:21:20Z"
+  },
+  {
+    "number": 10827,
+    "state": "open",
+    "title": "Skill supply-chain security: provenance tracking + permission manifests",
+    "html_url": "https://github.com/openclaw/openclaw/issues/10827",
+    "score": 2,
+    "hits": [
+      "approve",
+      "elevated"
+    ],
+    "updated_at": "2026-02-17T18:37:28Z"
+  },
+  {
+    "number": 14743,
+    "state": "open",
+    "title": "[Bug]: Cron Announce Delivery to Telegram Silently Fails",
+    "html_url": "https://github.com/openclaw/openclaw/issues/14743",
+    "score": 2,
+    "hits": [
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-17T13:09:03Z"
+  },
+  {
+    "number": 2223,
+    "state": "closed",
+    "title": "WhatsApp: Pairing message sent even when dmPolicy is 'allowlist'",
+    "html_url": "https://github.com/openclaw/openclaw/issues/2223",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-17T12:41:22Z"
+  },
+  {
+    "number": 19091,
+    "state": "open",
+    "title": "[Bug]: Device token mismatch after upgrade to 2026.2.15 with gateway.bind=lan — probe succeeds, RPC fails",
+    "html_url": "https://github.com/openclaw/openclaw/issues/19091",
+    "score": 2,
+    "hits": [
+      "device token mismatch",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-17T11:19:40Z"
+  },
+  {
+    "number": 19072,
+    "state": "open",
+    "title": "First-class tool execution approvals: pause + interrupt + resume",
+    "html_url": "https://github.com/openclaw/openclaw/issues/19072",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-17T09:57:12Z"
+  },
+  {
+    "number": 18683,
+    "state": "open",
+    "title": "[Bug]: Telegram setMyCommands failed on native skill command name.",
+    "html_url": "https://github.com/openclaw/openclaw/issues/18683",
+    "score": 2,
+    "hits": [
+      "approve",
+      "elevated"
+    ],
+    "updated_at": "2026-02-17T08:10:01Z"
+  },
+  {
+    "number": 19004,
+    "state": "open",
+    "title": "CLI uses LAN IP instead of loopback for local gateway calls when bind=lan",
+    "html_url": "https://github.com/openclaw/openclaw/issues/19004",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-17T07:45:28Z"
+  },
+  {
+    "number": 18834,
+    "state": "open",
+    "title": "Elevated permissions not resolved in agentCommand path (sessions_spawn, sessions_send, sub-agents)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/18834",
+    "score": 2,
+    "hits": [
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-17T03:47:45Z"
+  },
+  {
+    "number": 18760,
+    "state": "open",
+    "title": "Core: Global task idempotency/concurrency guard to prevent duplicate runs under session-lane backpressure",
+    "html_url": "https://github.com/openclaw/openclaw/issues/18760",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-17T01:44:42Z"
+  },
+  {
+    "number": 18748,
+    "state": "open",
+    "title": "Elevated exec fails in cron and sessions_send (nested) runs despite correct config",
+    "html_url": "https://github.com/openclaw/openclaw/issues/18748",
+    "score": 2,
+    "hits": [
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-17T01:29:59Z"
+  },
+  {
+    "number": 4980,
+    "state": "closed",
+    "title": "Interactive CLI flows can be SIGKILL'd in agent exec (e.g., gh auth login waiting for approval)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/4980",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-17T00:21:44Z"
+  },
+  {
+    "number": 6176,
+    "state": "open",
+    "title": "[Bug]: macOS companion app crashes when exec approval is pending",
+    "html_url": "https://github.com/openclaw/openclaw/issues/6176",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-17T00:20:33Z"
+  },
+  {
+    "number": 6397,
+    "state": "closed",
+    "title": "[WebChat] Exec approval dialog buttons hidden when command is long",
+    "html_url": "https://github.com/openclaw/openclaw/issues/6397",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-17T00:19:51Z"
+  },
+  {
+    "number": 8026,
+    "state": "open",
+    "title": "[Bug]: trustedProxies setting not working with Synology reverse proxy",
+    "html_url": "https://github.com/openclaw/openclaw/issues/8026",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-17T00:14:10Z"
+  },
+  {
+    "number": 8682,
+    "state": "open",
+    "title": "[Bug]: Exec approval bypass via client-controlled flags in system.run",
+    "html_url": "https://github.com/openclaw/openclaw/issues/8682",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-17T00:11:44Z"
+  },
+  {
+    "number": 9235,
+    "state": "open",
+    "title": "[Bug]: Node exec tool passes wrong parameter format to system.run (causes spawn /bin/sh ENOENT)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/9235",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-17T00:10:51Z"
+  },
+  {
+    "number": 18659,
+    "state": "open",
+    "title": "[Bug]: CLI auth regression: `openclaw nodes` ... fails with device token mismatch, while same command works with `--token`",
+    "html_url": "https://github.com/openclaw/openclaw/issues/18659",
+    "score": 2,
+    "hits": [
+      "device token mismatch",
+      "approve"
+    ],
+    "updated_at": "2026-02-16T23:40:14Z"
+  },
+  {
+    "number": 18037,
+    "state": "closed",
+    "title": "[Bug]: Nested Subagent Spawning - Announce Chain Routing Issue",
+    "html_url": "https://github.com/openclaw/openclaw/issues/18037",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-16T23:00:28Z"
+  },
+  {
+    "number": 17780,
+    "state": "open",
+    "title": "Discord Components v2: components parameter silently dropped in message tool send action",
+    "html_url": "https://github.com/openclaw/openclaw/issues/17780",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-16T07:45:34Z"
+  },
+  {
+    "number": 5131,
+    "state": "closed",
+    "title": "Voice call plugin accepts calls but never generates/serves TTS audio",
+    "html_url": "https://github.com/openclaw/openclaw/issues/5131",
+    "score": 2,
+    "hits": [
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-16T04:13:43Z"
+  },
+  {
+    "number": 17631,
+    "state": "closed",
+    "title": "Security: Pairing allowFrom store is global per-channel, not per-account",
+    "html_url": "https://github.com/openclaw/openclaw/issues/17631",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-16T03:10:16Z"
+  },
+  {
+    "number": 17607,
+    "state": "open",
+    "title": "Slash command sessions do not persist channel metadata, breaking allowFrom checks",
+    "html_url": "https://github.com/openclaw/openclaw/issues/17607",
+    "score": 2,
+    "hits": [
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-16T00:10:53Z"
+  },
+  {
+    "number": 17571,
+    "state": "open",
+    "title": "[Docs]: Third-party client authentication guide (device identity, Ed25519, scope requirements)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/17571",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-15T22:43:09Z"
+  },
+  {
+    "number": 17498,
+    "state": "open",
+    "title": "[Bug]: Command Approval Dialog Is Not Resizable and Truncates Critical Information",
+    "html_url": "https://github.com/openclaw/openclaw/issues/17498",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-15T22:41:41Z"
+  },
+  {
+    "number": 17471,
+    "state": "open",
+    "title": "[Bug]: /elevated full does not work even when configured correctly",
+    "html_url": "https://github.com/openclaw/openclaw/issues/17471",
+    "score": 2,
+    "hits": [
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-15T19:57:22Z"
+  },
+  {
+    "number": 17353,
+    "state": "open",
+    "title": "[Bug]: Control UI stops streaming; requires manual refresh (F5) after WS 1008 unauthorized: device token mismatch on localhost/WSL",
+    "html_url": "https://github.com/openclaw/openclaw/issues/17353",
+    "score": 2,
+    "hits": [
+      "device token mismatch",
+      "approve"
+    ],
+    "updated_at": "2026-02-15T17:39:14Z"
+  },
+  {
+    "number": 17163,
+    "state": "closed",
+    "title": "[Gait Alignment] Add approval decision receipts (who approved, what, when, why)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/17163",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-15T13:49:46Z"
+  },
+  {
+    "number": 15502,
+    "state": "closed",
+    "title": "[Bug]: before_tool_call hook fires 2–3 times per tool invocation",
+    "html_url": "https://github.com/openclaw/openclaw/issues/15502",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-15T05:41:44Z"
+  },
+  {
+    "number": 16579,
+    "state": "open",
+    "title": "[Bug]: Openclaw onboard skips API key input and goes directly to channel config",
+    "html_url": "https://github.com/openclaw/openclaw/issues/16579",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-14T23:25:14Z"
+  },
+  {
+    "number": 16470,
+    "state": "open",
+    "title": "Shell analysis rejects literal newlines inside double-quoted strings",
+    "html_url": "https://github.com/openclaw/openclaw/issues/16470",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-14T19:46:33Z"
+  },
+  {
+    "number": 16302,
+    "state": "open",
+    "title": "[Bug]: rocky linux - signal-cli install failed: Error: spawn tar ENOENT",
+    "html_url": "https://github.com/openclaw/openclaw/issues/16302",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-14T16:06:54Z"
+  },
+  {
+    "number": 9299,
+    "state": "open",
+    "title": "[Bug]: Persistent Failures on Synology DSM (Docker) vs. MacBook Success",
+    "html_url": "https://github.com/openclaw/openclaw/issues/9299",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-14T13:29:39Z"
+  },
+  {
+    "number": 16111,
+    "state": "open",
+    "title": "Add inline keyboard buttons to Telegram exec approval forwarding",
+    "html_url": "https://github.com/openclaw/openclaw/issues/16111",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-14T08:41:52Z"
+  },
+  {
+    "number": 16108,
+    "state": "open",
+    "title": "[Bug]: BlueBubbles channel configuration is not being enforced",
+    "html_url": "https://github.com/openclaw/openclaw/issues/16108",
+    "score": 2,
+    "hits": [
+      "approval",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-14T08:40:50Z"
+  },
+  {
+    "number": 15906,
+    "state": "open",
+    "title": "[Bug]: Remote Code Execution via Rogue Gateway Impersonation (Discovery Spoofing)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/15906",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-14T02:38:11Z"
+  },
+  {
+    "number": 15504,
+    "state": "closed",
+    "title": "[Bug] Exec approval requests lack inline buttons in Telegram",
+    "html_url": "https://github.com/openclaw/openclaw/issues/15504",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-14T02:10:43Z"
+  },
+  {
+    "number": 12856,
+    "state": "closed",
+    "title": "Node pairing: pending requests written to disk but never exposed via API",
+    "html_url": "https://github.com/openclaw/openclaw/issues/12856",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-14T02:07:07Z"
+  },
+  {
+    "number": 12825,
+    "state": "closed",
+    "title": "Slack DM allowlist not working - still shows pairing prompt",
+    "html_url": "https://github.com/openclaw/openclaw/issues/12825",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-14T02:06:59Z"
+  },
+  {
+    "number": 12401,
+    "state": "closed",
+    "title": "Native Agent-to-Agent Communication (A2A Protocol Support)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/12401",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-14T02:06:21Z"
+  },
+  {
+    "number": 12320,
+    "state": "closed",
+    "title": "[Bug]: Linux/WSL Node: exec-approvals.json ignored, all system.run commands denied",
+    "html_url": "https://github.com/openclaw/openclaw/issues/12320",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-14T02:06:13Z"
+  },
+  {
+    "number": 10696,
+    "state": "closed",
+    "title": "Feature Request: Silent Pairing Mode - Read messages without auto-responding",
+    "html_url": "https://github.com/openclaw/openclaw/issues/10696",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-14T02:03:57Z"
+  },
+  {
+    "number": 9625,
+    "state": "closed",
+    "title": "`openclaw node run` 无法创建配对请求，Gateway返回 pairing required 但 pending 列表为空",
+    "html_url": "https://github.com/openclaw/openclaw/issues/9625",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-14T02:02:43Z"
+  },
+  {
+    "number": 8586,
+    "state": "closed",
+    "title": "Security: Configurable bypass allows unrestricted command execution",
+    "html_url": "https://github.com/openclaw/openclaw/issues/8586",
+    "score": 2,
+    "hits": [
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-02-14T02:01:41Z"
+  },
+  {
+    "number": 7706,
+    "state": "closed",
+    "title": "Feature Request: Approval Gates for Destructive Operations",
+    "html_url": "https://github.com/openclaw/openclaw/issues/7706",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-14T01:42:27Z"
+  },
+  {
+    "number": 15885,
+    "state": "open",
+    "title": "[Bug]: Elevated exec permissions lost after spawning sub-agent",
+    "html_url": "https://github.com/openclaw/openclaw/issues/15885",
+    "score": 2,
+    "hits": [
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-14T01:10:34Z"
+  },
+  {
+    "number": 9229,
+    "state": "closed",
+    "title": "Feature Request: Inline Button Support for Exec Approvals in Telegram",
+    "html_url": "https://github.com/openclaw/openclaw/issues/9229",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-13T21:18:04Z"
+  },
+  {
+    "number": 4725,
+    "state": "closed",
+    "title": "Agent nodes tool skips exec approval flow for system.run",
+    "html_url": "https://github.com/openclaw/openclaw/issues/4725",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-13T18:04:26Z"
+  },
+  {
+    "number": 7327,
+    "state": "closed",
+    "title": "[Bug]: Telegram channel not receiving messages (long-polling issue)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/7327",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-13T15:14:32Z"
+  },
+  {
+    "number": 15262,
+    "state": "closed",
+    "title": "approvals.exec should include inline buttons (Approve/Deny) on Telegram",
+    "html_url": "https://github.com/openclaw/openclaw/issues/15262",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-13T15:09:59Z"
+  },
+  {
+    "number": 5038,
+    "state": "closed",
+    "title": "Bug: macOS app exec approval prompt doesn't show the command",
+    "html_url": "https://github.com/openclaw/openclaw/issues/5038",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-13T14:49:08Z"
+  },
+  {
+    "number": 15201,
+    "state": "open",
+    "title": "[Bug]: Windows Node Host - Session 0 Isolation Prevents Exec Approval Popups and Foreground WebSocket Handshake 400",
+    "html_url": "https://github.com/openclaw/openclaw/issues/15201",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-13T05:28:22Z"
+  },
+  {
+    "number": 10128,
+    "state": "closed",
+    "title": "[Bug]: node.invoke lets operator.write bypass exec approvals with caller-controlled approved flag",
+    "html_url": "https://github.com/openclaw/openclaw/issues/10128",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-13T03:29:26Z"
+  },
+  {
+    "number": 12826,
+    "state": "closed",
+    "title": "Slack DM allowlist not working - still shows pairing prompt",
+    "html_url": "https://github.com/openclaw/openclaw/issues/12826",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-13T03:24:47Z"
+  },
+  {
+    "number": 13948,
+    "state": "open",
+    "title": "Feature Request: Action-Level Tool Deny",
+    "html_url": "https://github.com/openclaw/openclaw/issues/13948",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-13T01:30:32Z"
+  },
+  {
+    "number": 7679,
+    "state": "open",
+    "title": "Telegram should default to allowlist mode with owner ID",
+    "html_url": "https://github.com/openclaw/openclaw/issues/7679",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-11T14:24:01Z"
+  },
+  {
+    "number": 12723,
+    "state": "closed",
+    "title": "After using it for a period of time, session accumulation issues have arisen.",
+    "html_url": "https://github.com/openclaw/openclaw/issues/12723",
+    "score": 2,
+    "hits": [
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-10T09:07:07Z"
+  },
+  {
+    "number": 7343,
+    "state": "open",
+    "title": "Security: Option to obfuscate/hash owner IDs in system prompt injection",
+    "html_url": "https://github.com/openclaw/openclaw/issues/7343",
+    "score": 2,
+    "hits": [
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-10T07:37:57Z"
+  },
+  {
+    "number": 8959,
+    "state": "open",
+    "title": "Feature: Cross-platform multi-select component in message tool",
+    "html_url": "https://github.com/openclaw/openclaw/issues/8959",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-10T07:36:22Z"
+  },
+  {
+    "number": 10157,
+    "state": "open",
+    "title": "Security: No outbound message restrictions — AI agents can send to arbitrary numbers",
+    "html_url": "https://github.com/openclaw/openclaw/issues/10157",
+    "score": 2,
+    "hits": [
+      "approval",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-10T07:25:15Z"
+  },
+  {
+    "number": 10164,
+    "state": "open",
+    "title": "Feature: Native Temporal integration for durable workflows and scheduling",
+    "html_url": "https://github.com/openclaw/openclaw/issues/10164",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-10T07:25:03Z"
+  },
+  {
+    "number": 12602,
+    "state": "open",
+    "title": "[Feature]: Slack Block Kit support for agent messages",
+    "html_url": "https://github.com/openclaw/openclaw/issues/12602",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-10T06:59:37Z"
+  },
+  {
+    "number": 13085,
+    "state": "closed",
+    "title": "Auto-cleanup Discord approval messages after resolution",
+    "html_url": "https://github.com/openclaw/openclaw/issues/13085",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-10T06:39:43Z"
+  },
+  {
+    "number": 11917,
+    "state": "closed",
+    "title": "[Feature]: Exec approval messages: render command in monospace",
+    "html_url": "https://github.com/openclaw/openclaw/issues/11917",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-08T15:48:54Z"
+  },
+  {
+    "number": 4166,
+    "state": "closed",
+    "title": "[Feature]: Security Hardening: Sandbox Isolation, Path Sanitization, and Browser Auth",
+    "html_url": "https://github.com/openclaw/openclaw/issues/4166",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-07T19:53:52Z"
+  },
+  {
+    "number": 3934,
+    "state": "closed",
+    "title": "Feature: Inline buttons for exec approval messages in Telegram",
+    "html_url": "https://github.com/openclaw/openclaw/issues/3934",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-06T22:14:15Z"
+  },
+  {
+    "number": 8304,
+    "state": "closed",
+    "title": "Feature Request: Discord-based approval system for remote exec commands",
+    "html_url": "https://github.com/openclaw/openclaw/issues/8304",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-06T17:02:26Z"
+  },
+  {
+    "number": 6324,
+    "state": "closed",
+    "title": "Feature: Outbound allowlist for messaging channels (allowTo)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/6324",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-06T05:58:58Z"
+  },
+  {
+    "number": 8552,
+    "state": "closed",
+    "title": "[Bug]: trustedProxies CIDR range not properly recognized; only specific IP works",
+    "html_url": "https://github.com/openclaw/openclaw/issues/8552",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-04T19:09:24Z"
+  },
+  {
+    "number": 8495,
+    "state": "open",
+    "title": "Feature: Auto-leave WhatsApp groups not in allowlist + group-join webhook",
+    "html_url": "https://github.com/openclaw/openclaw/issues/8495",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-04T13:06:26Z"
+  },
+  {
+    "number": 6744,
+    "state": "closed",
+    "title": "[Bug]: The Docker image built with Docker does not include the `openclaw`command",
+    "html_url": "https://github.com/openclaw/openclaw/issues/6744",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-03T22:07:34Z"
+  },
+  {
+    "number": 6823,
+    "state": "open",
+    "title": "Feature Request: Execution Guardrails for Tool Safety",
+    "html_url": "https://github.com/openclaw/openclaw/issues/6823",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-03T13:47:15Z"
+  },
+  {
+    "number": 7401,
+    "state": "closed",
+    "title": "[Bug]: Remote can't run commands on node",
+    "html_url": "https://github.com/openclaw/openclaw/issues/7401",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-02T21:44:24Z"
+  },
+  {
+    "number": 6940,
+    "state": "closed",
+    "title": "[Feature]: What if OpenClaw is not just a tool executor, but the “muscle & nervous system” of a Human-in-the-Loop AI organism?",
+    "html_url": "https://github.com/openclaw/openclaw/issues/6940",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-02T16:56:23Z"
+  },
+  {
+    "number": 6459,
+    "state": "closed",
+    "title": "Feature: Exec denylist for dangerous commands (defense-in-depth)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/6459",
+    "score": 2,
+    "hits": [
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-02-01T21:07:10Z"
+  },
+  {
+    "number": 6262,
+    "state": "closed",
+    "title": "feat(channels): Add 'confirming' dmPolicy mode for owner-approved responses",
+    "html_url": "https://github.com/openclaw/openclaw/issues/6262",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-01T15:02:09Z"
+  },
+  {
+    "number": 6275,
+    "state": "closed",
+    "title": "RFC: Formal Capability Verification for OpenClaw",
+    "html_url": "https://github.com/openclaw/openclaw/issues/6275",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-01T14:18:33Z"
+  },
+  {
+    "number": 6282,
+    "state": "closed",
+    "title": "Feature: Capability Negotiation Protocol",
+    "html_url": "https://github.com/openclaw/openclaw/issues/6282",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-01T13:56:53Z"
+  },
+  {
+    "number": 6220,
+    "state": "closed",
+    "title": "[Feature]: Allowlist Management in Control UI Inhalt:",
+    "html_url": "https://github.com/openclaw/openclaw/issues/6220",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-02-01T13:55:31Z"
+  },
+  {
+    "number": 3258,
+    "state": "closed",
+    "title": "[Bug]: Agent suggests non-existent 'clawdbot approve' CLI command",
+    "html_url": "https://github.com/openclaw/openclaw/issues/3258",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-01T01:58:16Z"
+  },
+  {
+    "number": 3177,
+    "state": "closed",
+    "title": "Mobile node app stuck on 'connecting' screen - multiple potential causes",
+    "html_url": "https://github.com/openclaw/openclaw/issues/3177",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-01T01:57:52Z"
+  },
+  {
+    "number": 2630,
+    "state": "closed",
+    "title": "Exec approval UX: support partial IDs and default to latest pending",
+    "html_url": "https://github.com/openclaw/openclaw/issues/2630",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-01T01:55:47Z"
+  },
+  {
+    "number": 4863,
+    "state": "closed",
+    "title": "[Feature]: Configurable tool-execution guard for agent safety",
+    "html_url": "https://github.com/openclaw/openclaw/issues/4863",
+    "score": 2,
+    "hits": [
+      "approval",
+      "elevated"
+    ],
+    "updated_at": "2026-02-01T00:33:58Z"
+  },
+  {
+    "number": 4771,
+    "state": "closed",
+    "title": "[Feature]: Password-protected exec approvals for Discord",
+    "html_url": "https://github.com/openclaw/openclaw/issues/4771",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-01T00:33:34Z"
+  },
+  {
+    "number": 3795,
+    "state": "closed",
+    "title": "[Feature]: Auto-approve device pairing for Tailscale Serve requests",
+    "html_url": "https://github.com/openclaw/openclaw/issues/3795",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-01T00:30:39Z"
+  },
+  {
+    "number": 2501,
+    "state": "closed",
+    "title": "iOS app: pairing required rejection without sending pairing request",
+    "html_url": "https://github.com/openclaw/openclaw/issues/2501",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-02-01T00:27:32Z"
+  },
+  {
+    "number": 2101,
+    "state": "closed",
+    "title": "[Feature]: slack approval buttons",
+    "html_url": "https://github.com/openclaw/openclaw/issues/2101",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-02-01T00:26:59Z"
+  },
+  {
+    "number": 4565,
+    "state": "closed",
+    "title": "Telegram exec approval prompts: add inline buttons (Allow once / Always allow / Deny)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/4565",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-01-31T02:54:33Z"
+  },
+  {
+    "number": 4743,
+    "state": "closed",
+    "title": "[Bug]: Docker - cli container can't connect to gateway",
+    "html_url": "https://github.com/openclaw/openclaw/issues/4743",
+    "score": 2,
+    "hits": [
+      "approve",
+      "pairing required"
+    ],
+    "updated_at": "2026-01-30T16:50:15Z"
+  },
+  {
+    "number": 2023,
+    "state": "closed",
+    "title": "Feature Request: Human-in-the-Loop approval for outbound messaging tools",
+    "html_url": "https://github.com/openclaw/openclaw/issues/2023",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-01-29T13:16:15Z"
+  },
+  {
+    "number": 3894,
+    "state": "closed",
+    "title": "Telegram: answerCallbackQuery + editMessageText for inline button callbacks",
+    "html_url": "https://github.com/openclaw/openclaw/issues/3894",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-01-29T09:42:32Z"
+  },
+  {
+    "number": 3819,
+    "state": "closed",
+    "title": "system.run always times out - socket connection attempt ignores mode:full setting",
+    "html_url": "https://github.com/openclaw/openclaw/issues/3819",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-01-29T06:49:39Z"
+  },
+  {
+    "number": 2191,
+    "state": "closed",
+    "title": "Documentation Gap: Setting up Split Architecture (Gateway VPS + Local Node)",
+    "html_url": "https://github.com/openclaw/openclaw/issues/2191",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-01-29T02:40:44Z"
+  },
+  {
+    "number": 2705,
+    "state": "closed",
+    "title": "Approval resolve fails with 'unknown approval id'",
+    "html_url": "https://github.com/openclaw/openclaw/issues/2705",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-01-27T14:41:52Z"
+  },
+  {
+    "number": 1734,
+    "state": "closed",
+    "title": "feat: per-sender tool policies in groups",
+    "html_url": "https://github.com/openclaw/openclaw/issues/1734",
+    "score": 2,
+    "hits": [
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-01-27T05:12:34Z"
+  },
+  {
+    "number": 1517,
+    "state": "closed",
+    "title": "Exec requires approval despite tools.exec.security: full",
+    "html_url": "https://github.com/openclaw/openclaw/issues/1517",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-01-23T19:38:43Z"
+  },
+  {
+    "number": 935,
+    "state": "closed",
+    "title": "[Bug]: iMessage auto-reply fails - Cross-context messaging denied",
+    "html_url": "https://github.com/openclaw/openclaw/issues/935",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-01-15T08:06:06Z"
+  },
+  {
+    "number": 653,
+    "state": "closed",
+    "title": "[Bug]: Runaway Polling Loop + Ignored Stop Commands",
+    "html_url": "https://github.com/openclaw/openclaw/issues/653",
+    "score": 2,
+    "hits": [
+      "approve",
+      "approval"
+    ],
+    "updated_at": "2026-01-10T16:23:50Z"
+  },
+  {
+    "number": 573,
+    "state": "closed",
+    "title": "[Bug] Containerized Gateway - `Unable to read loginctl linger status. Ensure systemd + loginctl are available.`",
+    "html_url": "https://github.com/openclaw/openclaw/issues/573",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-01-09T21:17:50Z"
+  },
+  {
+    "number": 362,
+    "state": "closed",
+    "title": "WhatsApp pairing flow spams repeated messages when access not configured",
+    "html_url": "https://github.com/openclaw/openclaw/issues/362",
+    "score": 2,
+    "hits": [
+      "approve",
+      "allowfrom"
+    ],
+    "updated_at": "2026-01-07T19:10:23Z"
+  },
+  {
+    "number": 181,
+    "state": "closed",
+    "title": "bug: elevated level defaults to 'on' when elevatedAllowed is false, breaking heartbeat/internal surfaces",
+    "html_url": "https://github.com/openclaw/openclaw/issues/181",
+    "score": 2,
+    "hits": [
+      "elevated",
+      "allowfrom"
+    ],
+    "updated_at": "2026-01-04T16:36:15Z"
+  }
+]

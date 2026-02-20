@@ -1,0 +1,5 @@
+# Local research data — large JSON files, not committed to repo
+research/openclaw-issues-snapshot/*/issues-all.json
+research/openclaw-issues-snapshot/*/issues-all.jsonl
+research/openclaw-issues-snapshot/*/issues-open.json
+research/openclaw-issues-snapshot/*/issues-closed.json
