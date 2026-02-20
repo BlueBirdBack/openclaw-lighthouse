@@ -1,23 +1,31 @@
-# Telegram `/approve` unauthorized + `/elevated full` blocked (WSL troubleshooting)
+# Telegram `/approve` says unauthorized and `/elevated full` fails (beginner guide)
 
 ## Problem
-In Telegram control flow, elevated/approval actions failed intermittently in WSL environments.
+In Telegram control flow, admin commands fail with errors like:
+- `/approve` → unauthorized / device token mismatch
+- `/elevated full` → blocked by provider gate
 
-## Symptoms
-- `Exec denied ... approval-request-failed`
-- `/approve` returned unauthorized/device-token mismatch
-- `/elevated full` reported provider gate failure
+## What these commands mean
+- `/approve`: confirms a device/session is allowed to run protected actions.
+- `/elevated full`: temporarily allows high-risk shell/tool actions.
 
-## Root cause
-This was a compound local setup issue:
+If either is broken, admin actions will be denied.
 
-1. **Stale operator device token** caused approval mismatch.
-2. **Elevated allowlist gating** did not match the active Telegram caller/session.
-3. In some setups, network/proxy path confusion can make debugging noisy, so health checks are needed first.
+## Why this happens (plain English)
+Usually it is one (or both) of these:
 
-## Fix / workaround
+1. **Old/stale device token**
+   - OpenClaw still trusts an old operator device token.
+   - Your current Telegram session token does not match it.
 
-### 1) Quick health check
+2. **Elevated allowlist does not include your Telegram ID**
+   - Elevated mode is enabled, but your caller ID is not allowed.
+
+(WSL networking/proxy issues can add noise during debugging, but they are not the main auth cause.)
+
+## Step-by-step fix
+
+### 1) Check health first
 ```bash
 openclaw status
 openclaw gateway status
@@ -30,18 +38,20 @@ If gateway is unhealthy:
 openclaw gateway restart
 ```
 
-### 2) Repair `/approve` token mismatch
+### 2) Fix `/approve` token mismatch
+List devices:
+
 ```bash
 openclaw devices list
 ```
 
-- If a pending request exists:
+If you see a pending request:
 
 ```bash
 openclaw devices approve <request-id>
 ```
 
-- If no pending request and operator token is stale:
+If there is no pending request and token looks stale, revoke old operator device:
 
 ```bash
 openclaw devices revoke --device <device-id> --role operator
@@ -50,14 +60,14 @@ openclaw gateway restart
 
 Then trigger a fresh approval flow from Telegram.
 
-### 3) Repair `/elevated full` provider gate
-Check current policy:
+### 3) Fix `/elevated full` allowlist
+Check current setting:
 
 ```bash
 openclaw config get tools.elevated
 ```
 
-Use a scoped allowlist in `~/.openclaw/openclaw.json` (sanitize with your own IDs):
+Set a minimal allowlist in `~/.openclaw/openclaw.json` (replace IDs with your own):
 
 ```json
 {
@@ -79,35 +89,28 @@ Restart gateway:
 openclaw gateway restart
 ```
 
-Then retest in Telegram:
+Retest in Telegram:
 
 ```text
 /elevated full
 ```
 
-### 4) Explain blocked session gates directly
+### 4) If still blocked, ask OpenClaw which gate failed
 ```bash
 openclaw sandbox explain --session <session-key>
 ```
 
-This prints failing gates and fix keys for that session.
+This command shows exactly which policy gate failed and what to change.
 
-### 5) Optional effort-level validation after repair
-Use your own local CLIs to sanity-check effort modes (Codex/Claude) if required by your workflow.
-
-### 6) WSL proxy/network note
-- WSL networking mode can change whether proxy is reachable via host-IP or localhost.
-- This affects media/network behavior, separate from DM authorization policy.
+## Security notes
+- Keep allowlists narrow (only your own IDs).
+- Do not leave broad elevated access on after testing.
+- Redact tokens/device IDs/user IDs before sharing logs.
 
 ## Validation
-- [x] approval path recovered after token/gate cleanup
+- [x] approval path recovered after token cleanup
 - [x] `/elevated full` available after allowlist fix + gateway restart
 - [x] session gate diagnosis command provided actionable output
-
-## Security note
-- Keep IDs in config minimal and explicit.
-- Revert broad elevated testing modes after debugging (for example `/elevated ask` or `/elevated off`).
-- Redact tokens, user IDs, and device IDs in any shared logs/docs.
 
 ## Related Issues
 
@@ -126,5 +129,5 @@ Use your own local CLIs to sanity-check effort modes (Codex/Claude) if required 
 - [ ] upstream fix linked
 
 ## References
-- Related diagnostics: `openclaw status`, `openclaw gateway status`, `openclaw channels status --probe`
+- Diagnostics: `openclaw status`, `openclaw gateway status`, `openclaw channels status --probe`
 - Session gate explain: `openclaw sandbox explain --session <session-key>`

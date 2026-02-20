@@ -1,57 +1,36 @@
-# Telegram media/files got no reply (proxy/network path mismatch)
+# Telegram bot replies to text but not to photos/files (beginner guide)
 
 ## Problem
-Telegram text messages worked, but image/file messages sometimes got no assistant reply.
+Your Telegram bot answers normal text messages, but it does **not** answer when you send:
+- a photo
+- a file/document
+- sometimes voice/audio
 
-## Symptoms
-- Text-only turns replied normally.
-- Media turns were silent or intermittent.
-- Gateway logs showed Telegram media download failures (for example `MediaFetchError ... fetch failed`).
+## Why this happens (plain English)
+For media messages, OpenClaw must first **download the file from Telegram**.
 
-## Root cause
-High-confidence local root cause: Telegram media download was not consistently using a working network path in this environment.
+In some networks, that download path is blocked or unstable unless a proxy is used.  
+So text works, but media download fails — and you get no reply.
 
-In practice, adding a channel-level proxy fixed the inbound media path.
+## Quick fix (most users)
+Add a proxy under the Telegram channel config.
 
-## Fix / workaround
-Set Telegram channel proxy in `~/.openclaw/openclaw.json`.
+Open this file:
 
-Minimal config change:
+```bash
+~/.openclaw/openclaw.json
+```
+
+Add (or update) `channels.telegram.proxy`:
 
 ```json
 "channels": {
   "telegram": {
     "enabled": true,
     "dmPolicy": "pairing",
-    "botToken": "<<hidden>>",
-    "groups": { "*": { "requireMention": true } },
     "groupPolicy": "open",
     "streamMode": "partial",
     "proxy": "http://<proxy-host>:<proxy-port>"
-  }
-}
-```
-
-Recommended hardened variant (optional, for unstable networks):
-
-```json
-"channels": {
-  "telegram": {
-    "enabled": true,
-    "dmPolicy": "pairing",
-    "groupPolicy": "allowlist",
-    "streamMode": "partial",
-    "mediaMaxMb": 20,
-    "timeoutSeconds": 60,
-    "proxy": "http://<proxy-host>:<proxy-port>",
-    "retry": {
-      "attempts": 4,
-      "minDelayMs": 500,
-      "maxDelayMs": 5000
-    },
-    "network": {
-      "autoSelectFamily": false
-    }
   }
 }
 ```
@@ -62,27 +41,46 @@ Then restart gateway:
 openclaw gateway restart
 ```
 
-## Validation
-- [x] reproduced before fix
-- [x] fixed after config change + gateway restart
-- [x] image-only message replied normally
-- [x] image + caption replied normally
+## Test after restart
+1. Send a plain text message to the bot (should reply).
+2. Send one image only (should reply).
+3. Send image + caption (should reply).
 
-## If issue returns
-1. Follow live logs:
-   ```bash
-   openclaw logs --follow --json --local-time --max-bytes 300000
-   ```
-2. Send one test image and check Telegram channel log lines for media fetch errors.
-3. Verify network path externally (IPv4/IPv6 behavior may differ):
-   ```bash
-   curl -4sv "https://api.telegram.org/file/bot<BOT_TOKEN>/<file_path>" -o /tmp/tg-test.jpg
-   curl -6sv "https://api.telegram.org/file/bot<BOT_TOKEN>/<file_path>" -o /tmp/tg-test-v6.jpg
-   ```
-4. Re-check that the gateway process/service is actually using the expected proxy settings.
+If all 3 work, the fix is done.
+
+## If it still fails
+
+### 1) Check service health
+```bash
+openclaw status
+openclaw gateway status
+openclaw channels status --probe
+```
+
+### 2) Watch logs while sending a test image
+```bash
+openclaw logs --follow --json --local-time --max-bytes 300000
+```
+
+Look for media download errors (for example: `MediaFetchError`, `fetch failed`, timeout).
+
+### 3) (Optional advanced) Compare IPv4 vs IPv6 network path
+```bash
+curl -4sv "https://api.telegram.org/file/bot<BOT_TOKEN>/<file_path>" -o /tmp/tg-test.jpg
+curl -6sv "https://api.telegram.org/file/bot<BOT_TOKEN>/<file_path>" -o /tmp/tg-test-v6.jpg
+```
+
+If one works and the other fails, your network route is the likely cause.
 
 ## Security note
-If bot token appears in pasted commands/logs, rotate it in BotFather, update `channels.telegram.botToken`, and restart gateway.
+- Never share your real bot token in screenshots/logs.
+- If token was exposed, rotate it in BotFather, update config, and restart gateway.
+
+## Validation
+- [x] reproduced before fix
+- [x] fixed after proxy config + gateway restart
+- [x] image-only message replied normally
+- [x] image + caption replied normally
 
 ## Related Issues
 
@@ -101,7 +99,7 @@ If bot token appears in pasted commands/logs, rotate it in BotFather, update `ch
 ## References
 - Issue: n/a (local deployment incident)
 - PR: n/a
-- Logs: local runtime observations (Telegram media/file no-reply, resolved after proxy/network config)
+- Logs: local runtime observations (media no-reply resolved after Telegram proxy/network config)
 
 ## Credits
 - **B3** — reported and confirmed the fix
