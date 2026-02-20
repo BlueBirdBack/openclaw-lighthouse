@@ -1,6 +1,6 @@
 # Fixes Index
 
-Beginner-friendly troubleshooting guides for common OpenClaw + Telegram problems.
+Troubleshooting guides for common OpenClaw issues.
 
 ## Start here
 
@@ -11,6 +11,10 @@ Beginner-friendly troubleshooting guides for common OpenClaw + Telegram problems
 ### 2) `/approve` unauthorized or `/elevated full` blocked
 - Read: [Telegram `/approve` says unauthorized and `/elevated full` fails](./telegram-approve-device-token-mismatch-and-elevated-gate.md)
 - Use this when admin/approval commands fail.
+
+### 3) OpenAI/Gemini required for memory?
+- Read: [OpenClaw memory search: OpenAI/Gemini APIs are optional](./openclaw-memory-search-embeddings-api-optional.md)
+- Use this when deciding between remote embeddings, local embeddings, or no semantic search.
 
 ## Template
 - [Fix template](./TEMPLATE.md)
