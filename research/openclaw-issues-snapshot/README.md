@@ -1,110 +1,131 @@
 # openclaw/openclaw Issues Snapshot
 
-Local read-only offline mirror of GitHub issues from `openclaw/openclaw`.
-**No files here modify upstream GitHub.** Safe to read, grep, and analyse freely.
+Local **read-only** offline mirror of GitHub issues from `openclaw/openclaw`.
+It is for analysis only — no upstream issue is modified by these scripts.
 
 ## Why this exists
-Reviewing 10,000+ issues in a browser is slow and leaves a trace. This lets us
-do offline keyword analysis and cross-reference against Lighthouse notes without
-touching the upstream repo.
+- Reviewing 10K+ issues in browser is slow and noisy.
+- We want diff-friendly history of issue changes.
+- We want to map upstream issues to Lighthouse fix notes without posting anything yet.
 
-## How to refresh (re-run when issues are stale)
+## Automation strategy
+- **Weekly full snapshot** (baseline)
+- **Daily delta snapshot** (what changed since last run)
+
+Use **auto mode** to get both with one cron job.
+
+## Scripts
+- `scripts/snapshot_manager.py`
+  - `--mode full`  → fetch all issues (open + closed)
+  - `--mode delta` → fetch issues updated since last run (or `--since`)
+  - `--mode auto`  → weekly full, otherwise daily delta
+- `scripts/run_snapshot.sh` (cron-friendly wrapper with logging)
+- `cron.example` (ready-to-copy crontab lines)
+
+## Quick start
 
 ```bash
-export PATH="$HOME/bin:$PATH"
-BASE="$(dirname "$0")"
-TS="$(date +%Y-%m-%d-%H%M%S)"
-OUT="$BASE/$TS"
-mkdir -p "$OUT"
-export OUT
+cd /home/box/.openclaw/workspace/openclaw-lighthouse/research/openclaw-issues-snapshot
 
-python3 - <<'PY'
-import json, subprocess, os, datetime, pathlib
-out = pathlib.Path(os.environ['OUT'])
-repo = 'openclaw/openclaw'
-all_items = []
-page = 1
-while True:
-    cmd = ['gh','api','--method','GET',f'/repos/{repo}/issues',
-           '-f','state=all','-f','per_page=100','-f',f'page={page}',
-           '-f','sort=updated','-f','direction=desc']
-    p = subprocess.run(cmd, capture_output=True, text=True)
-    if p.returncode != 0:
-        raise SystemExit(f"gh api failed: {p.stderr}")
-    data = json.loads(p.stdout)
-    if not data:
-        break
-    for it in data:
-        if 'pull_request' in it:
-            continue
-        all_items.append({
-            'number': it.get('number'), 'title': it.get('title'),
-            'state': it.get('state'), 'html_url': it.get('html_url'),
-            'created_at': it.get('created_at'), 'updated_at': it.get('updated_at'),
-            'closed_at': it.get('closed_at'),
-            'user': (it.get('user') or {}).get('login'),
-            'labels': [lb.get('name') for lb in (it.get('labels') or [])],
-            'comments': it.get('comments'), 'body': it.get('body') or ''
-        })
-    page += 1
-all_items.sort(key=lambda x: x.get('updated_at') or '', reverse=True)
-open_items  = [i for i in all_items if i.get('state','').lower() == 'open']
-closed_items = [i for i in all_items if i.get('state','').lower() == 'closed']
-(out/'issues-all.json').write_text(json.dumps(all_items, ensure_ascii=False, indent=2), encoding='utf-8')
-(out/'issues-open.json').write_text(json.dumps(open_items, ensure_ascii=False, indent=2), encoding='utf-8')
-(out/'issues-closed.json').write_text(json.dumps(closed_items, ensure_ascii=False, indent=2), encoding='utf-8')
-with (out/'issues-all.jsonl').open('w', encoding='utf-8') as f:
-    for it in all_items:
-        f.write(json.dumps(it, ensure_ascii=False)+'\n')
-manifest = {
-    'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),
-    'repo': repo,
-    'issue_count_total': len(all_items),
-    'issue_count_open': len(open_items),
-    'issue_count_closed': len(closed_items),
-    'notes': 'Read-only local snapshot. Pull requests excluded.'
-}
-(out/'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
-print(json.dumps(manifest))
-PY
+# one-off baseline
+./scripts/run_snapshot.sh full
 
-ln -sfn "$OUT" "$BASE/latest"
-echo "Done → $OUT"
+# normal daily operation
+./scripts/run_snapshot.sh auto
 ```
+
+## Cron setup
+
+```bash
+crontab -e
+```
+
+Then add:
+
+```cron
+15 2 * * * /home/box/.openclaw/workspace/openclaw-lighthouse/research/openclaw-issues-snapshot/scripts/run_snapshot.sh auto
+```
+
+This single line is enough:
+- first run (or stale baseline) → full snapshot
+- normal days → delta snapshot
+
+See `cron.example` for optional explicit weekly full job.
 
 ## Directory layout
 
-```
+```text
 openclaw-issues-snapshot/
-  latest/               → symlink to most recent snapshot
-  YYYY-MM-DD-HHMMSS/
-    manifest.json       — counts + timestamp
-    issues-all.json     — full list (JSON array)
-    issues-all.jsonl    — one issue per line (good for grep/jq)
-    issues-open.json    — open only
-    issues-closed.json  — closed only
-    related-to-media-fix.json         — keyword-scored matches for media/proxy fix
-    related-to-approve-elevated-fix.json — keyword-scored matches for auth/elevated fix
-    README.md           — human-readable summary + top matches
+  full/
+    YYYY-MM-DD-HHMMSS/
+      manifest.json
+      issues-all.json
+      issues-open.json
+      issues-closed.json
+      issues-all.jsonl
+      related-to-media-fix.json
+      related-to-approve-elevated-fix.json
+      README.md
+  delta/
+    YYYY-MM-DD-HHMMSS/
+      manifest.json
+      issues-updated.json
+      issues-open-now.json
+      issues-closed-now.json
+      issues-updated.jsonl
+      new_opened.json
+      new_closed.json
+      newly_closed.json
+      reopened.json
+      still_open_updated.json
+      still_closed_updated.json
+      related-to-media-fix.json
+      related-to-approve-elevated-fix.json
+      README.md
+  latest-full      -> symlink to newest full snapshot
+  latest-delta     -> symlink to newest delta snapshot
+  latest           -> symlink to newest full snapshot (compat)
+  state/
+    snapshot-state.json   # local state cache for delta classification
+  logs/
+    snapshot-YYYY-MM-DD.log
+```
+
+## Retention defaults
+- Keep **8 full snapshots**
+- Keep **30 delta snapshots**
+
+Override with script flags:
+
+```bash
+python3 ./scripts/snapshot_manager.py --mode auto --keep-full 12 --keep-delta 45
 ```
 
 ## Large file note
-`issues-all.json`, `issues-open.json`, `issues-closed.json`, `issues-all.jsonl`
-are gitignored (each 10–26 MB). `manifest.json`, `README.md`, and `related-*.json`
-are committed (small).
+Huge files are gitignored:
+- `issues-all.json`
+- `issues-open.json`
+- `issues-closed.json`
+- `issues-all.jsonl`
+
+Committed files stay lightweight:
+- `manifest.json`
+- per-run `README.md`
+- `related-to-*.json`
+- this automation README/scripts
 
 ## Useful one-liners
 
 ```bash
-# Count open issues
-jq length latest/issues-open.json
+# Count currently open issues from latest full
+jq length latest-full/issues-open.json
 
-# Search by keyword in title (fast)
-jq '.[] | select(.title | test("proxy"; "i")) | [.number, .state, .title]' latest/issues-all.json
+# Search latest full by keyword
+jq '.[] | select(.title | test("proxy"; "i")) | [.number, .state, .title]' latest-full/issues-all.json
 
-# Full text search
-grep -i "MediaFetchError" latest/issues-all.jsonl | jq '.number, .title'
+# Show newly closed issues from latest delta
+jq '.[] | [.number, .title]' latest-delta/newly_closed.json
 
-# Top 20 recently updated open issues
-jq '[.[] | select(.state=="open")] | sort_by(.updated_at) | reverse | .[:20] | .[] | [.number, .title]' latest/issues-all.json
+# Show reopened issues from latest delta
+jq '.[] | [.number, .title]' latest-delta/reopened.json
 ```

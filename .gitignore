@@ -1,4 +1,13 @@
-# Local research data — large JSON files, not committed to repo
+# Local research runtime data (auto-generated snapshots)
+research/openclaw-issues-snapshot/full/
+research/openclaw-issues-snapshot/delta/
+research/openclaw-issues-snapshot/latest
+research/openclaw-issues-snapshot/latest-full
+research/openclaw-issues-snapshot/latest-delta
+research/openclaw-issues-snapshot/state/
+research/openclaw-issues-snapshot/logs/
+
+# Backward-compatible patterns for older one-level snapshots
 research/openclaw-issues-snapshot/*/issues-all.json
 research/openclaw-issues-snapshot/*/issues-all.jsonl
 research/openclaw-issues-snapshot/*/issues-open.json

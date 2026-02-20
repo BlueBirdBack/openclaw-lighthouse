@@ -1,0 +1,12 @@
+# Example crontab entries for OpenClaw issues snapshot automation
+#
+# Install with:
+#   crontab -e
+# Then paste one of the schedules below.
+
+# 1) Recommended: daily auto mode (weekly full + daily delta)
+#    - Runs every day at 02:15 local time
+15 2 * * * /home/box/.openclaw/workspace/openclaw-lighthouse/research/openclaw-issues-snapshot/scripts/run_snapshot.sh auto
+
+# 2) Optional explicit weekly full (Sunday 03:10)
+#10 3 * * 0 /home/box/.openclaw/workspace/openclaw-lighthouse/research/openclaw-issues-snapshot/scripts/run_snapshot.sh full
