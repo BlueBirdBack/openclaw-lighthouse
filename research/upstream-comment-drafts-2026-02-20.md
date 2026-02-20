@@ -5,8 +5,9 @@ Status: **DRAFT ONLY — not posted yet**.
 
 ---
 
-## Issue #20891
+## Issue #20891 ✅ POSTED
 https://github.com/openclaw/openclaw/issues/20891
+Posted comment: https://github.com/openclaw/openclaw/issues/20891#issuecomment-3935320312
 
 ```markdown
 We hit a very similar failure mode in a filtered network (Telegram media fetch would fail while text still worked).
