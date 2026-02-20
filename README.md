@@ -21,6 +21,6 @@ Each note should include:
 7. Links (issue/PR/logs)
 
 ## Credits
-- **Bruce Bell** ([@BlueBirdBack](https://github.com/BlueBirdBack)) — maintainer
+- **B3** ([@BlueBirdBack](https://github.com/BlueBirdBack)) — maintainer
 - **Rac** — OpenClaw debugging companion
 - **Friend** — add GitHub handle after collaborator is confirmed
