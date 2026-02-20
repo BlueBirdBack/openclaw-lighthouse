@@ -102,15 +102,15 @@ openclaw sandbox explain --session <session-key>
 
 This command shows exactly which policy gate failed and what to change.
 
-## Security notes
-- Keep allowlists narrow (only your own IDs).
-- Do not leave broad elevated access on after testing.
-- Redact tokens/device IDs/user IDs before sharing logs.
-
 ## Validation
 - [x] approval path recovered after token cleanup
 - [x] `/elevated full` available after allowlist fix + gateway restart
 - [x] session gate diagnosis command provided actionable output
+
+## Security notes
+- Keep allowlists narrow (only your own IDs).
+- Do not leave broad elevated access on after testing.
+- Redact tokens/device IDs/user IDs before sharing logs.
 
 ## Related Issues
 

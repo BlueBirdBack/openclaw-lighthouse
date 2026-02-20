@@ -12,9 +12,9 @@ For media messages, OpenClaw must first **download the file from Telegram**.
 In some networks, that download path is blocked or unstable unless a proxy is used.  
 So text works, but media download fails — and you get no reply.
 
-## Quick fix (most users)
-Add a proxy under the Telegram channel config.
+## Step-by-step fix
 
+### 1) Add a Telegram proxy in config
 Open this file:
 
 ```bash
@@ -35,20 +35,19 @@ Add (or update) `channels.telegram.proxy`:
 }
 ```
 
-Then restart gateway:
-
+### 2) Restart gateway
 ```bash
 openclaw gateway restart
 ```
 
-## Test after restart
+### 3) Run a quick test
 1. Send a plain text message to the bot (should reply).
 2. Send one image only (should reply).
 3. Send image + caption (should reply).
 
 If all 3 work, the fix is done.
 
-## If it still fails
+## Optional checks if it still fails
 
 ### 1) Check service health
 ```bash
@@ -57,30 +56,30 @@ openclaw gateway status
 openclaw channels status --probe
 ```
 
-### 2) Watch logs while sending a test image
+### 2) Watch logs while sending one test image
 ```bash
 openclaw logs --follow --json --local-time --max-bytes 300000
 ```
 
 Look for media download errors (for example: `MediaFetchError`, `fetch failed`, timeout).
 
-### 3) (Optional advanced) Compare IPv4 vs IPv6 network path
+### 3) Compare IPv4 vs IPv6 route (advanced)
 ```bash
 curl -4sv "https://api.telegram.org/file/bot<BOT_TOKEN>/<file_path>" -o /tmp/tg-test.jpg
 curl -6sv "https://api.telegram.org/file/bot<BOT_TOKEN>/<file_path>" -o /tmp/tg-test-v6.jpg
 ```
 
-If one works and the other fails, your network route is the likely cause.
-
-## Security note
-- Never share your real bot token in screenshots/logs.
-- If token was exposed, rotate it in BotFather, update config, and restart gateway.
+If one works and the other fails, your network route is likely the cause.
 
 ## Validation
 - [x] reproduced before fix
 - [x] fixed after proxy config + gateway restart
 - [x] image-only message replied normally
 - [x] image + caption replied normally
+
+## Security note
+- Never share your real bot token in screenshots/logs.
+- If token was exposed, rotate it in BotFather, update config, and restart gateway.
 
 ## Related Issues
 
