@@ -1,4 +1,4 @@
-# Telegram `/approve` says unauthorized and `/elevated full` fails (beginner guide)
+# Telegram `/approve` says unauthorized and `/elevated full` fails
 
 ## Problem
 In Telegram control flow, admin commands fail with errors like:
@@ -11,7 +11,7 @@ In Telegram control flow, admin commands fail with errors like:
 
 If either is broken, admin actions will be denied.
 
-## Why this happens (plain English)
+## Why this happens
 Usually it is one (or both) of these:
 
 1. **Old/stale device token**

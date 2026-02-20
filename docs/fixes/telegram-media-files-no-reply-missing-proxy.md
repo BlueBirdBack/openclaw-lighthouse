@@ -1,4 +1,4 @@
-# Telegram bot replies to text but not to photos/files (beginner guide)
+# Telegram bot replies to text but not to photos/files
 
 ## Problem
 Your Telegram bot answers normal text messages, but it does **not** answer when you send:
@@ -6,7 +6,7 @@ Your Telegram bot answers normal text messages, but it does **not** answer when 
 - a file/document
 - sometimes voice/audio
 
-## Why this happens (plain English)
+## Why this happens
 For media messages, OpenClaw must first **download the file from Telegram**.
 
 In some networks, that download path is blocked or unstable unless a proxy is used.  
