@@ -14,6 +14,7 @@ Front door for this repo. Start here.
 
 ## Open issues
 - [Multi-agent routing: setup works for simple cases, but advanced configs are fragile](./issues/multi-agent-routing-setup-fragility.md)
+- [OpenAI Codex provider cooldown: all models failed (no available auth profile)](./issues/openai-codex-all-models-failed-cooldown-rate-limit.md)
 
 ---
 
