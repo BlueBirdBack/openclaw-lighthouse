@@ -92,12 +92,22 @@ openclaw pairing approve telegram <CODE> --notify
 ### A) `Unknown channel: telegram`
 Usually means telegram plugin runtime not active yet.
 
+It can also happen when CLI commands run in a different OpenClaw profile than the running gateway.
+
 Check:
 
 ```bash
 openclaw plugins list | grep -i telegram
 openclaw config get plugins.allow
 openclaw config get plugins.entries.telegram.enabled
+```
+
+If you use named profiles, run all commands with the same profile:
+
+```bash
+openclaw --profile <profile_name> channels status --probe
+openclaw --profile <profile_name> channels add --channel telegram --token "<BOTFATHER_TOKEN>"
+openclaw --profile <profile_name> plugins list | grep -i telegram
 ```
 
 ### B) `requests: []` and no pairing code
