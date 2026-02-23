@@ -23,7 +23,7 @@ Front door for this repo. Start here.
 - [OpenAI Codex account switch (Plus → Pro) + onboard reset: Telegram stops replying](./issues/openai-codex-plus-to-pro-onboard-reset-telegram-no-reply.md)
 - [Feishu QuickStart install warns: `plugins.allow` is empty and non-bundled plugins may auto-load](./issues/feishu-plugin-install-plugins-allow-empty-warning.md)
 - [`install.sh` + Feishu setup: duplicate plugin id warning spam and gateway health check failure](./issues/install-sh-feishu-duplicate-plugin-id-and-gateway-health-check-fail.md)
-- [All models failed: mixed timeout + provider cooldown + Anthropic OAuth 403](./issues/all-models-failed-mixed-provider-timeout-cooldown-auth.md)
+- [All models failed: fallback chain exhausted by cooldown/auth failures](./issues/all-models-failed-mixed-provider-timeout-cooldown-auth.md)
 
 ---
 

@@ -1,10 +1,11 @@
-# All models failed: mixed timeout + provider cooldown + Anthropic OAuth 403
+# All models failed: fallback chain exhausted by cooldown/auth failures
 
 ## Summary
-A reply failed before generation because the full model fallback chain was exhausted.
+A reply failed before generation because every model in the fallback chain was unavailable.
 
-Observed error payload (redacted):
+Observed payload variants (redacted):
 
+### Variant A (mixed timeout + auth policy + cooldown)
 ```text
 All models failed (4):
 - openai-codex/gpt-5.3-codex: LLM request timed out. (unknown)
@@ -13,34 +14,45 @@ All models failed (4):
 - anthropic/claude-opus-4-6: No available auth profile for anthropic (all in cooldown or unavailable). (rate_limit)
 ```
 
-This is a multi-provider availability/auth failure, not a single-model failure.
+### Variant B (pure multi-provider cooldown)
+```text
+All models failed (4):
+- openai-codex/gpt-5.3-codex: Provider openai-codex is in cooldown (all profiles unavailable). (rate_limit)
+- openai-codex/gpt-5.3-codex-spark: Provider openai-codex is in cooldown (all profiles unavailable). (rate_limit)
+- anthropic/claude-sonnet-4-6: Provider anthropic is in cooldown (all profiles unavailable). (rate_limit)
+- anthropic/claude-opus-4-6: Provider anthropic is in cooldown (all profiles unavailable). (rate_limit)
+```
 
-Redaction note: request IDs and any organization-identifying details are intentionally omitted.
+This issue cluster is about **fallback exhaustion**, not a single-model bug.
+
+Redaction note: request IDs and organization-identifying details are intentionally omitted.
 
 ## Environment
-- Date observed: 2026-02-23
+- First observed: 2026-02-23
 - Channel context: Telegram workflow
 - Model chain in error:
   - `openai-codex/gpt-5.3-codex`
   - `openai-codex/gpt-5.3-codex-spark`
   - `anthropic/claude-sonnet-4-6`
   - `anthropic/claude-opus-4-6`
-- OpenClaw version: not captured in this report payload
+- OpenClaw version: not consistently captured in payloads
 
 ## Reproduction
-1. Configure fallback chain across multiple models/providers.
-2. Keep an Anthropic OAuth profile in an organization where OAuth is blocked.
-3. Trigger provider cooldown/rate-limit conditions on remaining profiles.
-4. Send a normal request.
+1. Configure a multi-model fallback chain.
+2. Keep one or more profiles in cooldown/rate-limit state.
+3. Optionally include an auth-policy-blocked profile (e.g., org-level OAuth not allowed).
+4. Send a normal user prompt.
 
 ## Findings
-1. Fallback chain only helps if at least one downstream profile is both valid and available.
-2. `HTTP 403 permission_error` on Anthropic OAuth is a hard auth policy failure (not a temporary timeout).
-3. Cooldown/rate-limit on remaining profiles can make all fallback candidates unavailable.
-4. Result: hard user-facing outage (`Agent failed before reply: All models failed`).
+1. Fallback only works if at least one downstream profile is both valid and currently available.
+2. This cluster has two practical modes:
+   - auth/policy failure (403) + cooldown
+   - cooldown-only across all configured providers
+3. Cooldown-only mode can cause full outage even when credentials are technically valid.
+4. User-facing result is hard failure: `Agent failed before reply: All models failed`.
 
 ## Mitigation / Workaround
-1. Verify live provider/profile health:
+1. Probe provider/profile health first:
 
 ```bash
 openclaw models status --probe --plain
@@ -48,28 +60,28 @@ openclaw models status --probe --probe-provider openai-codex --plain
 openclaw models status --probe --probe-provider anthropic --plain
 ```
 
-2. Fix Anthropic auth mode for this org (use an allowed auth method/profile instead of blocked OAuth).
-3. Ensure fallback includes at least one provider/profile that is currently healthy.
-4. Temporarily remove blocked profiles from fallback order until auth policy is fixed.
-5. Capture incident logs for audit:
+2. Remove or fix profiles blocked by org auth policy.
+3. Ensure fallback includes at least one healthy provider/profile path.
+4. During cooldown storms, use backoff/retry window instead of rapid re-fire.
+5. Keep incident evidence:
 
 ```bash
 openclaw logs --follow
 ```
 
 ## Risk / Impact
-- **Reliability:** no reply is delivered.
-- **Operability:** fallback appears configured but still fails hard.
+- **Reliability:** no reply delivered.
+- **Operability:** fallback looks configured but can still fail hard.
 - **User trust:** repeated outages look random without profile-level health visibility.
 
 ## Related Issues/PRs
-- Local Lighthouse note (partial overlap, codex-only cooldown focus):
+- Local Lighthouse note (codex-only overlap):
   - [OpenAI Codex provider cooldown: all models failed (no available auth profile)](./openai-codex-all-models-failed-cooldown-rate-limit.md)
 
 ## Next actions
-- [ ] Add an auth/profile preflight check before production rollout.
-- [ ] Keep fallback providers independent and policy-compatible.
-- [ ] Open upstream issue if reproducible with full `models status --probe` evidence.
+- [ ] Add auth/profile preflight checks before production rollout.
+- [ ] Keep at least one independent healthy fallback path per deployment.
+- [ ] If reproducible with probes/logs, open upstream issue with redacted evidence bundle.
 
 ## References
 - [Model Failover](https://docs.openclaw.ai/concepts/model-failover)
