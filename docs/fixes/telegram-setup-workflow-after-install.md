@@ -6,6 +6,7 @@ After a fresh OpenClaw install, Telegram setup may fail or behave inconsistently
 - `Unknown channel: telegram`
 - no pairing code appears (`requests: []`)
 - bot does not reply after token setup
+- outbound test arrives from the wrong Telegram bot
 
 On root VPS hosts, this often combines with gateway lifecycle issues.
 
@@ -17,6 +18,7 @@ Most failures come from one of these:
 3. Channel token was added before plugin/channel runtime was active.
 4. Pairing flow was expected, but no pending request existed yet.
 5. On root VPS, `systemctl --user` may be unavailable, so service-mode restart fails.
+6. Bot token mapping is wrong (for example, multiple bots/tokens used on the same VPS and the active token points to another bot).
 
 ## Step-by-step fix
 Follow this exact order.
@@ -118,6 +120,31 @@ Use root VPS quick recovery command:
 tmux kill-session -t openclaw 2>/dev/null || true
 tmux new -d -s openclaw 'openclaw gateway run --port 18789'
 ```
+
+### D) Outbound message comes from the wrong bot
+This means the VPS is using a different Telegram token than expected.
+
+1) Send an outbound test to yourself:
+
+```bash
+openclaw message send --channel telegram --target <telegram-user-id> --message "vps outbound test" --json
+```
+
+2) If the message comes from another bot, set the correct bot token for this VPS:
+
+```bash
+openclaw channels add --channel telegram --token "<BOT_TOKEN_FOR_THIS_VPS>"
+```
+
+3) Restart gateway (tmux mode) and verify:
+
+```bash
+tmux kill-session -t openclaw 2>/dev/null || true
+tmux new -d -s openclaw 'openclaw gateway run --port 18789'
+openclaw channels status --probe
+```
+
+Check that status shows the expected `bot:@<your_bot_username>`.
 
 ## Validation
 - [x] reproduced before fix (channel add/pairing confusion on fresh VPS install)

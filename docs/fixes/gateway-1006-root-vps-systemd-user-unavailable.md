@@ -86,6 +86,11 @@ Expected:
 - `RPC probe: ok`
 - channel shows `enabled, configured, running`
 
+Note for tmux mode:
+- `openclaw gateway status` may still show `Service: systemd (disabled)` and service runtime as stopped/inactive.
+- This is normal when you intentionally run gateway outside systemd.
+- In this case, trust `RPC probe: ok` + `Listening: 127.0.0.1:18789` + channel probe output.
+
 ## Optional checks if it still fails
 
 ### A) Read file logs directly (no RPC dependency)
@@ -110,6 +115,28 @@ grep -Ei 'failed before reply|all models failed|no available auth profile|rate_l
 ## Validation
 - [x] reproduced before fix (health check `1006`, gateway unreachable)
 - [x] fixed after change (`gateway status` probe OK, channel probe OK)
+
+## Field evidence (redacted transcript)
+```bash
+root@<vps>:~/.openclaw# openclaw gateway stop 2>/dev/null || true
+... Stopped systemd service: openclaw-gateway.service
+
+root@<vps>:~/.openclaw# systemctl --user disable --now openclaw-gateway.service 2>/dev/null || true
+
+root@<vps>:~/.openclaw# command -v tmux >/dev/null || (apt-get update && apt-get install -y tmux)
+
+root@<vps>:~/.openclaw# tmux kill-session -t openclaw 2>/dev/null || true
+root@<vps>:~/.openclaw# tmux new -d -s openclaw 'openclaw gateway run --port 18789'
+
+root@<vps>:~/.openclaw# openclaw gateway status
+... Service: systemd (disabled)
+... RPC probe: ok
+... Listening: 127.0.0.1:18789
+
+root@<vps>:~/.openclaw# openclaw channels status --probe
+... Gateway reachable.
+... Telegram default: enabled, configured, running, mode:polling, bot:@<telegram_bot>, token:config, works
+```
 
 ## Security notes
 - Keep `plugins.allow` explicit (least privilege plugin loading).
