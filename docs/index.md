@@ -13,7 +13,7 @@ Front door for this repo. Start here.
 - [Telegram bot replies to text but not to photos/files](./fixes/telegram-media-files-no-reply-missing-proxy.md)
 
 ## Open issues
-- _none yet_
+- [Multi-agent routing: setup works for simple cases, but advanced configs are fragile](./issues/multi-agent-routing-setup-fragility.md)
 
 ---
 
