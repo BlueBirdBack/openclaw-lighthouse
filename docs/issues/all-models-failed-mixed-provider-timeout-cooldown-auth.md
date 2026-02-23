@@ -14,18 +14,29 @@ All models failed (4):
 - anthropic/claude-opus-4-6: No available auth profile for anthropic (all in cooldown or unavailable). (rate_limit)
 ```
 
-### Variant B (pure multi-provider cooldown)
+### Variant B (runtime alert, mixed timeout + auth policy + cooldown)
 ```text
-All models failed (4):
+⚠️ Agent failed before reply: All models failed (4):
+- openai-codex/gpt-5.3-codex: LLM request timed out. (unknown)
+- openai-codex/gpt-5.3-codex-spark: No available auth profile for openai-codex (all in cooldown or unavailable). (rate_limit)
+- anthropic/claude-sonnet-4-6: HTTP 403 permission_error: OAuth authentication is currently not allowed for this organization. (request_id: <REDACTED_REQUEST_ID>) (auth)
+- anthropic/claude-opus-4-6: No available auth profile for anthropic (all in cooldown or unavailable). (rate_limit)
+Logs: openclaw logs --follow
+```
+
+### Variant C (runtime alert, pure multi-provider cooldown)
+```text
+⚠️ Agent failed before reply: All models failed (4):
 - openai-codex/gpt-5.3-codex: Provider openai-codex is in cooldown (all profiles unavailable). (rate_limit)
 - openai-codex/gpt-5.3-codex-spark: Provider openai-codex is in cooldown (all profiles unavailable). (rate_limit)
 - anthropic/claude-sonnet-4-6: Provider anthropic is in cooldown (all profiles unavailable). (rate_limit)
 - anthropic/claude-opus-4-6: Provider anthropic is in cooldown (all profiles unavailable). (rate_limit)
+Logs: openclaw logs --follow
 ```
 
 This issue cluster is about **fallback exhaustion**, not a single-model bug.
 
-Redaction note: request IDs and organization-identifying details are intentionally omitted.
+Redaction note: request IDs and organization-identifying details are redacted (shown as placeholders when useful for pattern matching).
 
 ## Environment
 - First observed: 2026-02-23
