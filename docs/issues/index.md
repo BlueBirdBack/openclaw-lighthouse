@@ -10,6 +10,7 @@ Open issue investigations and risk notes.
 5. [Feishu QuickStart install warns: `plugins.allow` is empty and non-bundled plugins may auto-load](./feishu-plugin-install-plugins-allow-empty-warning.md)
 6. [`install.sh` + Feishu setup: duplicate plugin id warning spam and gateway health check failure](./install-sh-feishu-duplicate-plugin-id-and-gateway-health-check-fail.md)
 7. [All models failed: fallback chain exhausted by cooldown/auth failures](./all-models-failed-mixed-provider-timeout-cooldown-auth.md)
+8. [OpenAI Codex `server_error`: request failed during processing](./openai-codex-server-error-processing-request.md)
 
 ## Template
 - [Issue template](./TEMPLATE.md)

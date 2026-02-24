@@ -19,6 +19,7 @@ Front door for this repo. Start here.
 ## Open issues
 - [Multi-agent routing: setup works for simple cases, but advanced configs are fragile](./issues/multi-agent-routing-setup-fragility.md)
 - [OpenAI Codex provider cooldown: all models failed (no available auth profile)](./issues/openai-codex-all-models-failed-cooldown-rate-limit.md)
+- [OpenAI Codex `server_error`: request failed during processing](./issues/openai-codex-server-error-processing-request.md)
 - [`openclaw update` reports ERROR after version changes, then `gateway restart` fails with `systemctl --user unavailable`](./issues/update-false-error-and-gateway-restart-systemctl-user-unavailable.md)
 - [OpenAI Codex account switch (Plus → Pro) + onboard reset: Telegram stops replying](./issues/openai-codex-plus-to-pro-onboard-reset-telegram-no-reply.md)
 - [Feishu QuickStart install warns: `plugins.allow` is empty and non-bundled plugins may auto-load](./issues/feishu-plugin-install-plugins-allow-empty-warning.md)
