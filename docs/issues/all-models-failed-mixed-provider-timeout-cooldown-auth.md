@@ -34,12 +34,23 @@ Logs: openclaw logs --follow
 Logs: openclaw logs --follow
 ```
 
+### Variant D (runtime alert, primary timeout + multi-provider cooldown)
+```text
+⚠️ Agent failed before reply: All models failed (4):
+- openai-codex/gpt-5.3-codex: LLM request timed out. (unknown)
+- openai-codex/gpt-5.3-codex-spark: No available auth profile for openai-codex (all in cooldown or unavailable). (rate_limit)
+- anthropic/claude-sonnet-4-6: Provider anthropic is in cooldown (all profiles unavailable). (rate_limit)
+- anthropic/claude-opus-4-6: Provider anthropic is in cooldown (all profiles unavailable). (rate_limit)
+Logs: openclaw logs --follow
+```
+
 This issue cluster is about **fallback exhaustion**, not a single-model bug.
 
 Redaction note: request IDs and organization-identifying details are redacted (shown as placeholders when useful for pattern matching).
 
 ## Environment
 - First observed: 2026-02-23
+- Also observed: 2026-02-24 (Variant D)
 - Channel context: Telegram workflow
 - Model chain in error:
   - `openai-codex/gpt-5.3-codex`
@@ -56,10 +67,11 @@ Redaction note: request IDs and organization-identifying details are redacted (s
 
 ## Findings
 1. Fallback only works if at least one downstream profile is both valid and currently available.
-2. This cluster has two practical modes:
+2. This cluster has three practical modes:
    - auth/policy failure (403) + cooldown
    - cooldown-only across all configured providers
-3. Cooldown-only mode can cause full outage even when credentials are technically valid.
+   - primary timeout + downstream multi-provider cooldown
+3. Cooldown-heavy modes can cause full outage even when credentials are technically valid.
 4. User-facing result is hard failure: `Agent failed before reply: All models failed`.
 
 ## Mitigation / Workaround
