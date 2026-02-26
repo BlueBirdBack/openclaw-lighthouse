@@ -11,6 +11,8 @@ Open issue investigations and risk notes.
 6. [`install.sh` + Feishu setup: duplicate plugin id warning spam and gateway health check failure](./install-sh-feishu-duplicate-plugin-id-and-gateway-health-check-fail.md)
 7. [All models failed: fallback chain exhausted by cooldown/auth failures](./all-models-failed-mixed-provider-timeout-cooldown-auth.md)
 8. [OpenAI Codex `server_error`: request failed during processing](./openai-codex-server-error-processing-request.md)
+9. [Telegram no-reply after a specific prompt (`exo man build mac 3 ultra cluster`)](./telegram-no-reply-after-specific-prompt-exo-man-mac3-ultra-cluster.md)
+10. [`openclaw uninstall` + reinstall: provider onboarding is skipped, no AI provider prompt, OpenClaw unusable](./uninstall-reinstall-skips-provider-onboarding.md)
 
 ## Template
 - [Issue template](./TEMPLATE.md)
