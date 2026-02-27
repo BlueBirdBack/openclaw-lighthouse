@@ -16,15 +16,19 @@ Troubleshooting guides for common OpenClaw issues.
 - Read: [Gateway health check fails with `1006` on root VPS (`systemctl --user` unavailable)](./gateway-1006-root-vps-systemd-user-unavailable.md)
 - Use this when install succeeded but gateway/channel probes fail on root VPS.
 
-### 4) Bot replies to text, but not photos/files
+### 4) Root VPS: C3 down after plugin + restart failure
+- Read: [Root VPS recovery: remove `camofox-browser` and run gateway in tmux when `systemctl --user` is unavailable](./camofox-browser-root-vps-recovery.md)
+- Use this when a non-bundled plugin is loaded and update/restart fails on root VPS.
+
+### 5) Bot replies to text, but not photos/files
 - Read: [Telegram bot replies to text but not to photos/files](./telegram-media-files-no-reply-missing-proxy.md)
 - Use this when text works but image/file/voice messages get no reply.
 
-### 5) `/approve` unauthorized or `/elevated full` blocked
+### 6) `/approve` unauthorized or `/elevated full` blocked
 - Read: [Telegram `/approve` says unauthorized and `/elevated full` fails](./telegram-approve-device-token-mismatch-and-elevated-gate.md)
 - Use this when admin/approval commands fail.
 
-### 6) OpenAI/Gemini required for memory?
+### 7) OpenAI/Gemini required for memory?
 - Read: [OpenClaw memory search: OpenAI/Gemini APIs are optional](./openclaw-memory-search-embeddings-api-optional.md)
 - Use this when deciding between remote embeddings, local embeddings, or no semantic search.
 

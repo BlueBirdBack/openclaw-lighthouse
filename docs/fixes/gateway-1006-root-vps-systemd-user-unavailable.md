@@ -144,6 +144,7 @@ root@<vps>:~/.openclaw# openclaw channels status --probe
 - Keep gateway bind on loopback unless remote exposure and auth are intentionally configured.
 
 ## Related Issues
+- [Root VPS recovery: remove `camofox-browser` and run gateway in tmux when `systemctl --user` is unavailable](./camofox-browser-root-vps-recovery.md)
 - [Feishu QuickStart install warns: `plugins.allow` is empty and non-bundled plugins may auto-load](../issues/feishu-plugin-install-plugins-allow-empty-warning.md)
 - [`install.sh` + Feishu setup: duplicate plugin id warning spam and gateway health check failure](../issues/install-sh-feishu-duplicate-plugin-id-and-gateway-health-check-fail.md)
 - [`openclaw update` reports ERROR after version changes, then `gateway restart` fails with `systemctl --user unavailable`](../issues/update-false-error-and-gateway-restart-systemctl-user-unavailable.md)
