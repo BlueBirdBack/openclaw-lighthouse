@@ -3,15 +3,19 @@
 Front door for this repo. Start here.
 
 ## Latest fixes (up to 50)
-1. [Root VPS recovery: remove `camofox-browser` and run gateway in tmux when `systemctl --user` is unavailable](./fixes/camofox-browser-root-vps-recovery.md)
-2. [OpenClaw clean uninstall and reinstall (root/Linux)](./fixes/openclaw-clean-uninstall-and-reinstall.md)
-3. [Telegram setup workflow after installing OpenClaw (with root VPS notes)](./fixes/telegram-setup-workflow-after-install.md)
-4. [Gateway health check fails with `1006` on root VPS (`systemctl --user` unavailable)](./fixes/gateway-1006-root-vps-systemd-user-unavailable.md)
-5. [OpenClaw memory search: OpenAI/Gemini APIs are optional](./fixes/openclaw-memory-search-embeddings-api-optional.md)
-6. [Telegram `/approve` says unauthorized and `/elevated full` fails](./fixes/telegram-approve-device-token-mismatch-and-elevated-gate.md)
-7. [Telegram bot replies to text but not to photos/files](./fixes/telegram-media-files-no-reply-missing-proxy.md)
+1. [Multi-instance session lock timeout: clear stale locks and restart gateways](./fixes/multi-instance-session-lock-timeout-clear-locks-and-restart.md)
+2. [Telegram `chat not found` on new bot: start the DM once before testing](./fixes/telegram-chat-not-found-new-bot-needs-start.md)
+3. [Root VPS recovery: remove `camofox-browser` and run gateway in tmux when `systemctl --user` is unavailable](./fixes/camofox-browser-root-vps-recovery.md)
+4. [OpenClaw clean uninstall and reinstall (root/Linux)](./fixes/openclaw-clean-uninstall-and-reinstall.md)
+5. [Telegram setup workflow after installing OpenClaw (with root VPS notes)](./fixes/telegram-setup-workflow-after-install.md)
+6. [Gateway health check fails with `1006` on root VPS (`systemctl --user` unavailable)](./fixes/gateway-1006-root-vps-systemd-user-unavailable.md)
+7. [OpenClaw memory search: OpenAI/Gemini APIs are optional](./fixes/openclaw-memory-search-embeddings-api-optional.md)
+8. [Telegram `/approve` says unauthorized and `/elevated full` fails](./fixes/telegram-approve-device-token-mismatch-and-elevated-gate.md)
+9. [Telegram bot replies to text but not to photos/files](./fixes/telegram-media-files-no-reply-missing-proxy.md)
 
 ## Solved
+- [Multi-instance session lock timeout: clear stale locks and restart gateways](./fixes/multi-instance-session-lock-timeout-clear-locks-and-restart.md)
+- [Telegram `chat not found` on new bot: start the DM once before testing](./fixes/telegram-chat-not-found-new-bot-needs-start.md)
 - [Root VPS recovery: remove `camofox-browser` and run gateway in tmux when `systemctl --user` is unavailable](./fixes/camofox-browser-root-vps-recovery.md)
 - [OpenClaw clean uninstall and reinstall (root/Linux)](./fixes/openclaw-clean-uninstall-and-reinstall.md)
 - [Telegram setup workflow after installing OpenClaw (with root VPS notes)](./fixes/telegram-setup-workflow-after-install.md)
@@ -21,6 +25,7 @@ Front door for this repo. Start here.
 - [Telegram bot replies to text but not to photos/files](./fixes/telegram-media-files-no-reply-missing-proxy.md)
 
 ## Open issues
+- [Multi-instance session lock timeout causes slow or missing replies](./issues/multi-instance-session-lock-timeout-slow-replies.md)
 - [Multi-agent routing: setup works for simple cases, but advanced configs are fragile](./issues/multi-agent-routing-setup-fragility.md)
 - [OpenAI Codex provider cooldown: all models failed (no available auth profile)](./issues/openai-codex-all-models-failed-cooldown-rate-limit.md)
 - [OpenAI Codex `server_error`: request failed during processing](./issues/openai-codex-server-error-processing-request.md)

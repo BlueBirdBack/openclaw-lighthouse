@@ -32,5 +32,13 @@ Troubleshooting guides for common OpenClaw issues.
 - Read: [OpenClaw memory search: OpenAI/Gemini APIs are optional](./openclaw-memory-search-embeddings-api-optional.md)
 - Use this when deciding between remote embeddings, local embeddings, or no semantic search.
 
+### 8) Multi-instance fleet replies are slow or missing (`session file locked`)
+- Read: [Multi-instance session lock timeout: clear stale locks and restart gateways](./multi-instance-session-lock-timeout-clear-locks-and-restart.md)
+- Use this when `openclaw agent` times out with `session file locked (timeout 10000ms)`.
+
+### 9) New Telegram bot says `chat not found`
+- Read: [Telegram `chat not found` on new bot: start the DM once before testing](./telegram-chat-not-found-new-bot-needs-start.md)
+- Use this when BotFather setup is done but outbound message tests fail.
+
 ## Template
 - [Fix template](./TEMPLATE.md)
