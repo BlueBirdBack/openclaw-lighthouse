@@ -3,17 +3,19 @@
 Front door for this repo. Start here.
 
 ## Latest fixes (up to 50)
-1. [Multi-instance session lock timeout: clear stale locks and restart gateways](./fixes/multi-instance-session-lock-timeout-clear-locks-and-restart.md)
-2. [Telegram `chat not found` on new bot: start the DM once before testing](./fixes/telegram-chat-not-found-new-bot-needs-start.md)
-3. [Root VPS recovery: remove `camofox-browser` and run gateway in tmux when `systemctl --user` is unavailable](./fixes/camofox-browser-root-vps-recovery.md)
-4. [OpenClaw clean uninstall and reinstall (root/Linux)](./fixes/openclaw-clean-uninstall-and-reinstall.md)
-5. [Telegram setup workflow after installing OpenClaw (with root VPS notes)](./fixes/telegram-setup-workflow-after-install.md)
-6. [Gateway health check fails with `1006` on root VPS (`systemctl --user` unavailable)](./fixes/gateway-1006-root-vps-systemd-user-unavailable.md)
-7. [OpenClaw memory search: OpenAI/Gemini APIs are optional](./fixes/openclaw-memory-search-embeddings-api-optional.md)
-8. [Telegram `/approve` says unauthorized and `/elevated full` fails](./fixes/telegram-approve-device-token-mismatch-and-elevated-gate.md)
-9. [Telegram bot replies to text but not to photos/files](./fixes/telegram-media-files-no-reply-missing-proxy.md)
+1. [`openclaw doctor --repair` not enough: reinstall via `install.sh` and restart gateway](./fixes/doctor-repair-not-working-install-sh-restart-gateway.md)
+2. [Multi-instance session lock timeout: clear stale locks and restart gateways](./fixes/multi-instance-session-lock-timeout-clear-locks-and-restart.md)
+3. [Telegram `chat not found` on new bot: start the DM once before testing](./fixes/telegram-chat-not-found-new-bot-needs-start.md)
+4. [Root VPS recovery: remove `camofox-browser` and run gateway in tmux when `systemctl --user` is unavailable](./fixes/camofox-browser-root-vps-recovery.md)
+5. [OpenClaw clean uninstall and reinstall (root/Linux)](./fixes/openclaw-clean-uninstall-and-reinstall.md)
+6. [Telegram setup workflow after installing OpenClaw (with root VPS notes)](./fixes/telegram-setup-workflow-after-install.md)
+7. [Gateway health check fails with `1006` on root VPS (`systemctl --user` unavailable)](./fixes/gateway-1006-root-vps-systemd-user-unavailable.md)
+8. [OpenClaw memory search: OpenAI/Gemini APIs are optional](./fixes/openclaw-memory-search-embeddings-api-optional.md)
+9. [Telegram `/approve` says unauthorized and `/elevated full` fails](./fixes/telegram-approve-device-token-mismatch-and-elevated-gate.md)
+10. [Telegram bot replies to text but not to photos/files](./fixes/telegram-media-files-no-reply-missing-proxy.md)
 
 ## Solved
+- [`openclaw doctor --repair` not enough: reinstall via `install.sh` and restart gateway](./fixes/doctor-repair-not-working-install-sh-restart-gateway.md)
 - [Multi-instance session lock timeout: clear stale locks and restart gateways](./fixes/multi-instance-session-lock-timeout-clear-locks-and-restart.md)
 - [Telegram `chat not found` on new bot: start the DM once before testing](./fixes/telegram-chat-not-found-new-bot-needs-start.md)
 - [Root VPS recovery: remove `camofox-browser` and run gateway in tmux when `systemctl --user` is unavailable](./fixes/camofox-browser-root-vps-recovery.md)
