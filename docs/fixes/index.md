@@ -48,5 +48,9 @@ Troubleshooting guides for common OpenClaw issues.
 - Read: [Telegram `chat not found` on new bot: start the DM once before testing](./telegram-chat-not-found-new-bot-needs-start.md)
 - Use this when BotFather setup is done but outbound message tests fail.
 
+### 11) Agent has no shell/git access after OpenClaw 3.2 fresh install
+- Read: [Agent has no shell/git/exec access after OpenClaw 3.2 fresh install](./v3-2-agent-no-exec-tools-profile-messaging-default.md)
+- Use this when a fresh 3.2 install leaves the agent with no coding/exec tools, or when `openclaw config set agents.defaults.tools.*` fails with a validation error.
+
 ## Template
 - [Fix template](./TEMPLATE.md)
