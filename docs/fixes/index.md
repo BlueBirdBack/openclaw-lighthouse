@@ -48,9 +48,17 @@ Troubleshooting guides for common OpenClaw issues.
 - Read: [Telegram `chat not found` on new bot: start the DM once before testing](./telegram-chat-not-found-new-bot-needs-start.md)
 - Use this when BotFather setup is done but outbound message tests fail.
 
-### 11) Agent has no shell/git access after OpenClaw 3.2 fresh install
+### 12) Agent has no shell/git access after OpenClaw 3.2 fresh install
 - Read: [Agent has no shell/git/exec access after OpenClaw 3.2 fresh install](./v3-2-agent-no-exec-tools-profile-messaging-default.md)
 - Use this when a fresh 3.2 install leaves the agent with no coding/exec tools, or when `openclaw config set agents.defaults.tools.*` fails with a validation error.
+
+### 13) Skills not executing after OpenClaw 3.2 / 3.7 upgrade (English)
+- Read: [Skills not executing after OpenClaw 3.2 / 3.7 upgrade (English)](./v3-2-v3-7-skills-not-executing-en.md)
+- Use this when skills stop running after upgrade and you need a combined 3.2/3.7 playbook.
+
+### 14) OpenClaw 3.2 / 3.7 升级后 skill 不执行（中文）
+- Read: [OpenClaw 3.2 / 3.7 升级后 skill 不执行（中文）](./v3-2-v3-7-skills-not-executing-zh.md)
+- 中文版排障与修复步骤，适用于 3.2 / 3.7 同类问题。
 
 ## Template
 - [Fix template](./TEMPLATE.md)
