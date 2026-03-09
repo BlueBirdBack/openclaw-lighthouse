@@ -40,7 +40,7 @@ openclaw sandbox recreate --all
 执行：
 
 ```bash
-openclaw agent --to telegram:<redacted> --message "Use exec tool to run: openclaw --version"
+openclaw agent --to <你的聊天目标> --message "Use exec tool to run: openclaw --version"
 ```
 
 期望：

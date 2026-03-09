@@ -40,7 +40,7 @@ openclaw sandbox recreate --all
 Run:
 
 ```bash
-openclaw agent --to telegram:<redacted> --message "Use exec tool to run: openclaw --version"
+openclaw agent --to <your-chat-target> --message "Use exec tool to run: openclaw --version"
 ```
 
 Expected:
