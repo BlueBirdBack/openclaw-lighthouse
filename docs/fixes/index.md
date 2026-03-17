@@ -60,5 +60,9 @@ Troubleshooting guides for common OpenClaw issues.
 - Read: [OpenClaw 3.2 / 3.7 升级后 skill 不执行（中文）](./v3-2-v3-7-skills-not-executing-zh.md)
 - 中文版排障与修复步骤，适用于 3.2 / 3.7 同类问题。
 
+### 15) Gateway aborts: `auth.profiles.order` config validation error
+- Read: [`auth.profiles.order` nested inside `profiles` instead of `auth`](./auth-profiles-order-nested-inside-profiles.md)
+- Use this when gateway refuses to start with `auth.profiles.order.provider: Invalid input` after manually editing `openclaw.json`.
+
 ## Template
 - [Fix template](./TEMPLATE.md)

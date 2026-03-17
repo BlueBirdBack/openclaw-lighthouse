@@ -14,6 +14,7 @@ Front door for this repo. Start here.
 9. [OpenClaw memory search: OpenAI/Gemini APIs are optional](./fixes/openclaw-memory-search-embeddings-api-optional.md)
 10. [Telegram `/approve` says unauthorized and `/elevated full` fails](./fixes/telegram-approve-device-token-mismatch-and-elevated-gate.md)
 11. [Telegram bot replies to text but not to photos/files](./fixes/telegram-media-files-no-reply-missing-proxy.md)
+12. [`auth.profiles.order` nested inside `profiles` instead of `auth`](./fixes/auth-profiles-order-nested-inside-profiles.md)
 
 ## Solved
 - [OpenAI Codex OAuth refresh failed: stale `openclaw` binary in `PATH` + re-auth via `onboard`](./fixes/openai-codex-oauth-refresh-failed-stale-path-onboard-reauth.md)
@@ -27,6 +28,7 @@ Front door for this repo. Start here.
 - [OpenClaw memory search: OpenAI/Gemini APIs are optional](./fixes/openclaw-memory-search-embeddings-api-optional.md)
 - [Telegram `/approve` says unauthorized and `/elevated full` fails](./fixes/telegram-approve-device-token-mismatch-and-elevated-gate.md)
 - [Telegram bot replies to text but not to photos/files](./fixes/telegram-media-files-no-reply-missing-proxy.md)
+- [`auth.profiles.order` nested inside `profiles` instead of `auth`](./fixes/auth-profiles-order-nested-inside-profiles.md)
 
 ## Open issues
 - [Multi-instance session lock timeout causes slow or missing replies](./issues/multi-instance-session-lock-timeout-slow-replies.md)
