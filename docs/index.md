@@ -3,7 +3,8 @@
 Front door for this repo. Start here.
 
 ## Latest fixes (up to 50)
-1. [OpenAI Codex OAuth refresh failed: stale `openclaw` binary in `PATH` + re-auth via `onboard`](./fixes/openai-codex-oauth-refresh-failed-stale-path-onboard-reauth.md)
+1. [Gateway reports old version after `npm` update — local bin copy vs global](./fixes/gateway-version-mismatch-local-bin-copy.md)
+2. [OpenAI Codex OAuth refresh failed: stale `openclaw` binary in `PATH` + re-auth via `onboard`](./fixes/openai-codex-oauth-refresh-failed-stale-path-onboard-reauth.md)
 2. [`openclaw doctor --repair` not enough: reinstall via `install.sh` and restart gateway](./fixes/doctor-repair-not-working-install-sh-restart-gateway.md)
 3. [Multi-instance session lock timeout: clear stale locks and restart gateways](./fixes/multi-instance-session-lock-timeout-clear-locks-and-restart.md)
 4. [Telegram `chat not found` on new bot: start the DM once before testing](./fixes/telegram-chat-not-found-new-bot-needs-start.md)
