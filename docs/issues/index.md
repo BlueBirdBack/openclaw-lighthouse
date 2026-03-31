@@ -15,5 +15,7 @@ Open issue investigations and risk notes.
 10. [Telegram no-reply after a specific prompt (`exo man build mac 3 ultra cluster`)](./telegram-no-reply-after-specific-prompt-exo-man-mac3-ultra-cluster.md)
 11. [`openclaw uninstall` + reinstall: provider onboarding is skipped, no AI provider prompt, OpenClaw unusable](./uninstall-reinstall-skips-provider-onboarding.md)
 
+12. [Broken build: resolveMainSessionKey missing import — every message fails with "Something went wrong"](./broken-build-resolveMainSessionKey-missing-import.md)
+
 ## Template
 - [Issue template](./TEMPLATE.md)
