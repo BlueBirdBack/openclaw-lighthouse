@@ -2,7 +2,7 @@
 
 ## Symptoms
 
-Every inbound Telegram message fails with "Something went wrong". Gateway starts cleanly — no config errors, all plugins load, Telegram bot connects and polls. The error only surfaces when a message actually arrives:
+Every inbound Telegram message fails with "Something went wrong while processing your request. Please try again." Gateway starts cleanly — no config errors, all plugins load, Telegram bot connects and polls. The error only surfaces when a message actually arrives:
 
 ```
 telegram dispatch failed: ReferenceError: resolveMainSessionKey is not defined
